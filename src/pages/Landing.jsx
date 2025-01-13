@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import contact_img from "../assets/images/landing/contact-us.png";
+import blog from "../assets/images/landing/blog.jpg";
 import {
+  Phone,
+  ChevronLeft,
+  ChevronRight,
   CircleCheck,
   Users,
   Clock,
@@ -13,10 +18,35 @@ import {
   Award,
   Crown,
   PlusCircle,
+  Mail,
+  Settings,
+  MessageCircle,
+  ArrowRight,
+  User,
 } from "lucide-react";
 import chart from "../assets/images/landing/chart.png";
 
 function Landing() {
+  const blogs = [
+    {
+      id: 1,
+      date: "5 May, 2023",
+      image: blog,
+      author: "Shafiqul",
+      comments: 3,
+      title: "Elevating Portfolio of Digital Marketing Excellence",
+      category: "Marketing",
+    },
+    {
+      id: 2,
+      date: "1 May, 2023",
+      image: blog,
+      author: "Shafiqul",
+      comments: 0,
+      title: "Examining Effective Business A Case Study Approach",
+      category: "Business",
+    },
+  ];
   const skills = [
     { name: "Business Strategy", percentage: 80 },
     { name: "Management", percentage: 88 },
@@ -41,6 +71,25 @@ function Landing() {
       year: "2022",
     },
   ];
+
+  const testimonials = [
+    {
+      dp: Trophy,
+      name: "Udara Neminda",
+      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    },
+    {
+      dp: Award,
+      name: "Dasun Chamathka",
+      text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    },
+    {
+      dp: Crown,
+      name: "Kasun Sudarshana",
+      text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    },
+  ];
+
   const processes = [
     {
       id: "01",
@@ -336,7 +385,7 @@ function Landing() {
         {/*card container*/}
         <div className="flex gap-12 justify-center max-lg:flex-col">
           <div className="bg-gray-300 h-[500px] lg:w-1/2 relative">
-            <div className="absolute h-20 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
+            <div className="absolute bg-[#d70e1d]/80 text-white rounded-lg h-25 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
               <p className="text-lg">text</p>
               <h1 className="text-2xl font-semibold">
                 title title title title title title title title title{" "}
@@ -344,7 +393,7 @@ function Landing() {
             </div>
           </div>
           <div className="bg-gray-300 h-[500px] lg:w-1/2 relative">
-            <div className="absolute h-20 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
+            <div className="absolute bg-[#d70e1d]/80 text-white rounded-lg h-25 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
               <p className="text-lg">text</p>
               <h1 className="text-2xl font-semibold">
                 title title title title title title title title title{" "}
@@ -603,22 +652,6 @@ function Landing() {
 
         {/* Main Content */}
         <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12">
-        <div className="border rounded-md">
-            <div className="relative">
-              <img
-                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
-                alt="crew-image"
-                className="w-full object-contain"
-              />
-              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
-                <PlusCircle />
-              </div>
-            </div>
-            <span className="bg-white text-black p-6 flex flex-col rounded-md">
-              <h1 className="text-xl font-bold">Name here</h1>
-              <p>Title here</p>
-            </span>
-          </div>
           <div className="border rounded-md">
             <div className="relative">
               <img
@@ -667,6 +700,329 @@ function Landing() {
               <p>Title here</p>
             </span>
           </div>
+          <div className="border rounded-md">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
+                alt="crew-image"
+                className="w-full object-contain"
+              />
+              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
+                <PlusCircle />
+              </div>
+            </div>
+            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+              <h1 className="text-xl font-bold">Name here</h1>
+              <p>Title here</p>
+            </span>
+          </div>
+        </div>
+      </div>
+      {/*testimonials*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Testimonials
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <span>What’s The </span>
+            <span className="text-[#d70e1d]">Client </span>
+            Say
+          </h2>
+        </div>
+
+        {/* carousel */}
+        <div
+          className="grid grid-cols-1 gap-12 md:gap-8 carousel slide"
+          id="carouselExampleControls"
+          data-coreui-ride="carousel"
+        >
+          <div className="carousel-inner">
+            {testimonials.map((process, index) => (
+              <React.Fragment key={process.name}>
+                {/* testimonial Item */}
+                <div
+                  className={`relative group carousel-item ${
+                    process.name === "Udara Neminda" ? "active" : ""
+                  }`}
+                >
+                  {/* card */}
+                  <div className="p-8 md:p-12 max-sm:p-0 max-md:h-[40dvh] h-[30dvh] flex flex-col justify-between">
+                    {/* testimonial text*/}
+                    <div className="text-lg md:text-xl font-semibold">
+                      <p className="text-justify">{process.text}</p>
+                    </div>
+                    <div>
+                      {/* dp Circle */}
+                      <div className="relative">
+                        <div className="w-10 h-10 mx-auto rounded-full border-1 border-[#d70e1d] flex items-center justify-center">
+                          <process.dp className="w-4 h-4 text-[#d70e1d]" />
+                        </div>
+                      </div>
+
+                      {/* author */}
+                      <h3 className="text-xl font-bold text-center mt-1">
+                        {process.name}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+          <button
+            className="carousel-control-prev text-black justify-end items-end max-md:hidden"
+            type="button"
+            data-coreui-target="#carouselExampleControls"
+            data-coreui-slide="prev"
+          >
+            <ChevronLeft className="" aria-hidden="true"></ChevronLeft>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next text-black justify-start items-end max-md:hidden"
+            type="button"
+            data-coreui-target="#carouselExampleControls"
+            data-coreui-slide="next"
+          >
+            <ChevronRight className="" aria-hidden="true"></ChevronRight>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      {/*addvr.*/}
+      <div className="lg:h-[30dvh] flex lg:mt-28 w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        <div className="w-full h-full flex justify-between px-12 bg-red-200 max-lg:py-6">
+          <div className="w-full h-full flex flex-col justify-center gap-3">
+            <h1 className="text-3xl font-bold max-lg:text-center">
+              Do You Need Expert Service?
+            </h1>
+            <p className="text-lg max-lg:text-center">
+              Various versions have evolved over the years sometimes.
+            </p>
+            <div className="flex gap-3">
+              <Phone className="w-12 h-12 p-2 bg-red-400 rounded-full" />
+              <div className="flex flex-col items-start">
+                <span className="">Call Now</span>
+                <span className="">+998-8776345</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative w-full h-full max-lg:hidden">
+            <img
+              src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/expert-1.png"
+              alt=""
+              className=" bottom-0 absolute right-0"
+            />
+          </div>
+        </div>
+      </div>
+      {/*clients*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        <p className="text-center">Here 10K+ Comapny Have Connceted With Us</p>
+        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6 mt-6">
+          <div className="bg-gray-300 flex justify-center items-center">
+            client logo here
+          </div>
+          <div className="bg-gray-300 flex justify-center items-center">
+            client logo here
+          </div>
+          <div className="bg-gray-300 flex justify-center items-center">
+            client logo here
+          </div>
+          <div className="bg-gray-300 flex justify-center items-center">
+            client logo here
+          </div>
+        </div>
+      </div>
+      {/*contact form*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Image and Social Icons */}
+          <div className="relative max-lg:hidden">
+            <img
+              src={contact_img}
+              alt="Contact representative"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                <span>Contact </span>
+                <span className="text-[#d70e1d]">Us Now</span>
+              </h2>
+              <p className="text-gray-600">
+                Certain circumstances and owing to the claims of duty or the
+                obligations of business it will frequently occur that pleasures.
+              </p>
+            </div>
+
+            <form className="space-y-4">
+              {/* Name Fields */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full p-3 bg-orange-50 rounded-lg pr-[30px]"
+                  />
+                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                  />
+                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+              </div>
+
+              {/* Contact Fields */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative">
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                  />
+                  <Phone className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                  />
+                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+              </div>
+
+              {/* Service and Budget Fields */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Need Services"
+                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                  />
+                  <Settings className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Budgets"
+                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                  />
+                  <DollarSign className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
+                </div>
+              </div>
+
+              {/* Message Field */}
+              <div className="relative">
+                <textarea
+                  placeholder="Your Message..."
+                  rows={4}
+                  className="w-full p-3 bg-orange-50 rounded-lg"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-[#d70e1d] to-red-500 text-white py-3 rounded-lg hover:from-orange-600 hover:to-red-600 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {/*blog posts*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Recent Blogs
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Our Latest <span className="text-[#d70e1d]">Blog</span>
+          </h2>
+        </div>
+
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {blogs.map((blog) => (
+            <div key={blog.id} className="group">
+              {/* Image Container */}
+              <div className="relative overflow-hidden rounded-lg mb-4">
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 bg-[#d70e1d] text-white px-3 py-1 rounded-md">
+                  {blog.date}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-3">
+                {/* Meta Info */}
+                <div className="flex items-center gap-4 text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    <span className="text-sm">By {blog.author}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MessageCircle className="w-4 h-4" />
+                    <span className="text-sm">({blog.comments}) Comments</span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold hover:text-[#d70e1d] transition-colors">
+                  {blog.title}
+                </h3>
+
+                {/* Read More Link */}
+                <div className="pt-2">
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-[#d70e1d] hover:gap-4 gap-2 transition-all"
+                  >
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
