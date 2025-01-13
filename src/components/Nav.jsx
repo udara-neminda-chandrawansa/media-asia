@@ -49,16 +49,16 @@ function Nav() {
                   {/* Dropdown menu */}
                   <div
                     id="home-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 "
                   >
                     <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      className="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownDefaultButton"
                     >
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 1
                         </a>
@@ -66,7 +66,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 2
                         </a>
@@ -74,7 +74,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 3
                         </a>
@@ -82,7 +82,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 4
                         </a>
@@ -102,16 +102,16 @@ function Nav() {
                   {/* Dropdown menu */}
                   <div
                     id="pages-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 "
                   >
                     <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      className="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownDefaultButton"
                     >
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 1
                         </a>
@@ -119,7 +119,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 2
                         </a>
@@ -127,7 +127,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 3
                         </a>
@@ -135,7 +135,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 4
                         </a>
@@ -155,16 +155,16 @@ function Nav() {
                   {/* Dropdown menu */}
                   <div
                     id="services-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 "
                   >
                     <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      className="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownDefaultButton"
                     >
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 1
                         </a>
@@ -172,7 +172,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 2
                         </a>
@@ -180,7 +180,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 3
                         </a>
@@ -188,7 +188,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 4
                         </a>
@@ -208,16 +208,16 @@ function Nav() {
                   {/* Dropdown menu */}
                   <div
                     id="portfolio-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44"
                   >
                     <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      className="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownDefaultButton"
                     >
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 1
                         </a>
@@ -225,7 +225,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 2
                         </a>
@@ -233,7 +233,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 3
                         </a>
@@ -241,7 +241,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 4
                         </a>
@@ -261,16 +261,16 @@ function Nav() {
                   {/* Dropdown menu */}
                   <div
                     id="blog-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 "
                   >
                     <ul
-                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      className="py-2 text-sm text-gray-700 "
                       aria-labelledby="dropdownDefaultButton"
                     >
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 1
                         </a>
@@ -278,7 +278,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 2
                         </a>
@@ -286,7 +286,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 3
                         </a>
@@ -294,7 +294,7 @@ function Nav() {
                       <li>
                         <a
                           href="#"
-                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          className="block px-4 py-2 hover:bg-gray-100 "
                         >
                           Item 4
                         </a>

@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { CircleCheck } from "lucide-react";
+import {
+  CircleCheck,
+  Users,
+  Clock,
+  Headphones,
+  DollarSign,
+} from "lucide-react";
+import chart from "../assets/images/landing/chart.png";
 
 function Landing() {
   const services = [
@@ -64,6 +71,7 @@ function Landing() {
 
   return (
     <div>
+      {/*banner*/}
       <div
         className="relative min-h-[85dvh] bg-cover bg-center nunito"
         style={{
@@ -98,7 +106,7 @@ function Landing() {
                 ))}
               </div>
 
-              <button className="px-6 py-3 w-fit text-[#d70e1d] transition-colors bg-transparent border border-[#d70e1d] rounded-md hover:bg-[#d70e1d] hover:text-white">
+              <button className="px-6 py-3 w-fit text-[#d70e1d] transition-colors bg-transparent border-2 border-[#d70e1d] rounded-md hover:bg-[#d70e1d] hover:text-white">
                 View Details
               </button>
             </div>
@@ -135,7 +143,7 @@ function Landing() {
         <div className="absolute flex flex-col gap-3 -translate-y-1/2 right-12 top-1/2 max-md:hidden">
           <a
             href="https://www.linkedin.com"
-            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:bg-[#d70e1d] hover:text-white"
+            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:text-[#d70e1d]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +158,7 @@ function Landing() {
           </a>
           <a
             href="https://www.pinterest.com"
-            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:bg-[#d70e1d] hover:text-white"
+            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:text-[#d70e1d]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +173,7 @@ function Landing() {
           </a>
           <a
             href="https://www.instagram.com"
-            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:bg-[#d70e1d] hover:text-white"
+            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:text-[#d70e1d]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +188,7 @@ function Landing() {
           </a>
           <a
             href="https://www.facebook.com"
-            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:bg-[#d70e1d] hover:text-white"
+            className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:text-[#d70e1d]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -267,18 +275,116 @@ function Landing() {
           </span>
         </span>
         {/*big title*/}
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-4xl md:text-5xl font-bold">
           Our <span className="text-[#d70e1d]">Case Study</span>
         </h1>
         {/*card container*/}
         <div className="flex gap-12 justify-center max-lg:flex-col">
           <div className="bg-gray-300 h-[500px] lg:w-1/2 relative">
-              <div className="absolute h-20 flex justify-center px-6 -bottom-10 w-4/5 left-6 flex-col">
-                <p className="text-lg">text</p>
-                <h1 className="text-2xl font-semibold">title title title title title title title title title </h1>
-              </div>
+            <div className="absolute h-20 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
+              <p className="text-lg">text</p>
+              <h1 className="text-2xl font-semibold">
+                title title title title title title title title title{" "}
+              </h1>
+            </div>
           </div>
-          <div className="bg-gray-300 h-[500px] lg:w-1/2"></div>
+          <div className="bg-gray-300 h-[500px] lg:w-1/2 relative">
+            <div className="absolute h-20 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
+              <p className="text-lg">text</p>
+              <h1 className="text-2xl font-semibold">
+                title title title title title title title title title{" "}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full max-w-6xl mx-auto px-4 py-12">
+        {/* Header Section */}
+        <div className="text-center mb-16 nunito">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Why Choose Us
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <span>Our </span>
+            <span className="text-[#d70e1d]">Experiences</span>
+            <span> On Era</span>
+          </h2>
+        </div>
+
+        {/* Main Content Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center nunito">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-[#d70e1d] p-3 rounded-lg">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Client Satisfaction.</h3>
+                <p className="text-gray-600">
+                  Various versions have evolved over the years.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-[#d70e1d] p-3 rounded-lg">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Experience Team.</h3>
+                <p className="text-gray-600">
+                  Various versions have evolved over the years.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Center Column - Pie Chart */}
+          <div className="flex justify-center">
+            <img
+              src={chart}
+              alt="Experience Chart"
+              className="w-full max-w-[300px]"
+            />
+          </div>
+
+          {/* Right Column */}
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-[#d70e1d] p-3 rounded-lg">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">On-time & Budget</h3>
+                <p className="text-gray-600">
+                  Various versions have evolved over the years.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-[#d70e1d] p-3 rounded-lg">
+                <Headphones className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">24/7 Support Team.</h3>
+                <p className="text-gray-600">
+                  Various versions have evolved over the years.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
