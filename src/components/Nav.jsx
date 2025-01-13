@@ -1,7 +1,8 @@
 import logo from "/logo-media-asia-wide.png";
-import { Phone, Mail, MapPin, Menu } from "lucide-react";
+import { Phone, Mail, MapPin, Menu, ChevronDown } from "lucide-react";
 import trapezoid_l from "../assets/images/nav/trapezoid.png";
 import trapezoid_r from "../assets/images/nav/trapezoid-2.png";
+import { Link } from "wouter";
 
 function Nav() {
   return (
@@ -34,19 +35,281 @@ function Nav() {
               </div>
             </div>
             {/*ul container*/}
-            <div className="flex items-center justify-center w-full max-md:justify-end h-5/6 max-xl:h-full max-md:pr-6 max-sm:hidden">
-              <ul className="flex gap-6 text-lg max-md:text-sm">
-                <li>Home</li>
-                <li>Pages</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>Blog</li>
-                <li>Contact</li>
+            <div className="flex items-center justify-center w-full max-md:justify-end h-5/6 max-xl:h-full max-md:pr-6 max-md:hidden">
+              <ul className="flex gap-6 text-lg">
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link
+                    data-dropdown-toggle="home-dropdown"
+                    data-dropdown-trigger="hover"
+                    className="flex items-center gap-1"
+                    href="/"
+                  >
+                    Home <ChevronDown />
+                  </Link>
+                  {/* Dropdown menu */}
+                  <div
+                    id="home-dropdown"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 4
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link
+                    data-dropdown-toggle="pages-dropdown"
+                    data-dropdown-trigger="hover"
+                    className="flex items-center gap-1"
+                    href="/"
+                  >
+                    Pages <ChevronDown />
+                  </Link>
+                  {/* Dropdown menu */}
+                  <div
+                    id="pages-dropdown"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 4
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link
+                    data-dropdown-toggle="services-dropdown"
+                    data-dropdown-trigger="hover"
+                    className="flex items-center gap-1"
+                    href="/"
+                  >
+                    Services <ChevronDown />
+                  </Link>
+                  {/* Dropdown menu */}
+                  <div
+                    id="services-dropdown"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 4
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link
+                    data-dropdown-toggle="portfolio-dropdown"
+                    data-dropdown-trigger="hover"
+                    className="flex items-center gap-1"
+                    href="/"
+                  >
+                    Portfolio <ChevronDown />
+                  </Link>
+                  {/* Dropdown menu */}
+                  <div
+                    id="portfolio-dropdown"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 4
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link
+                    data-dropdown-toggle="blog-dropdown"
+                    data-dropdown-trigger="hover"
+                    className="flex items-center gap-1"
+                    href="/"
+                  >
+                    Blog <ChevronDown />
+                  </Link>
+                  {/* Dropdown menu */}
+                  <div
+                    id="blog-dropdown"
+                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-800"
+                  >
+                    <ul
+                      className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          Item 4
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="hover:text-[#d70e1d] transition-all delay-75">
+                  <Link>Contact</Link>
+                </li>
               </ul>
             </div>
           </div>
-          {/*burgor button for max-sm*/}
-          <div className="flex items-center justify-center h-full px-6 sm:hidden">
+          {/*burgor button for max-md*/}
+          <div className="flex items-center justify-center h-full px-6 md:hidden">
             <button>
               <Menu></Menu>
             </button>
