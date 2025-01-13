@@ -9,10 +9,38 @@ import {
   Search,
   ClipboardList,
   Target,
+  Trophy,
+  Award,
+  Crown,
+  PlusCircle,
 } from "lucide-react";
 import chart from "../assets/images/landing/chart.png";
 
 function Landing() {
+  const skills = [
+    { name: "Business Strategy", percentage: 80 },
+    { name: "Management", percentage: 88 },
+    { name: "Technology", percentage: 75 },
+    { name: "Marketing", percentage: 90 },
+  ];
+
+  const awards = [
+    {
+      icon: Trophy,
+      title: "Top Digital Agency",
+      year: "2022",
+    },
+    {
+      icon: Award,
+      title: "Best Quality Service",
+      year: "2021",
+    },
+    {
+      icon: Crown,
+      title: "Best Developers",
+      year: "2022",
+    },
+  ];
   const processes = [
     {
       id: "01",
@@ -478,6 +506,167 @@ function Landing() {
               </div>
             </React.Fragment>
           ))}
+        </div>
+      </div>
+      {/*skills*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Our Skills
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Get <span className="text-[#d70e1d]">Professional</span> Services
+          </h2>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Column - Skills */}
+          <div className="space-y-8">
+            {skills.map((skill) => (
+              <div key={skill.name} className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <span className="font-medium">{skill.name}</span>
+                  <span className="text-[#d70e1d]">{skill.percentage}%</span>
+                </div>
+                <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-[#d70e1d] rounded-full relative"
+                    style={{ width: `${skill.percentage}%` }}
+                  >
+                    <div className="absolute right-0 top-0 w-3 h-3 bg-[#d70e1d] rounded-full border-3 border-gray-100" />
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Awards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+              {awards.map((award) => (
+                <div key={award.title} className="text-center space-y-3">
+                  <div className="w-24 h-24 mx-auto border-2 border-[#d70e1d]/20 rounded-full flex items-center justify-center">
+                    <award.icon className="w-10 h-10 text-[#d70e1d]" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">{award.title}</h3>
+                    <p className="text-sm text-gray-500">{award.year}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="relative">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/skill-bg-min.jpg"
+                alt="Professional at work"
+                className="rounded-lg w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*team*/}
+      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Media Asia Expertise
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Expert Team <span className="text-[#d70e1d]">Available</span>
+          </h2>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12">
+        <div className="border rounded-md">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
+                alt="crew-image"
+                className="w-full object-contain"
+              />
+              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
+                <PlusCircle />
+              </div>
+            </div>
+            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+              <h1 className="text-xl font-bold">Name here</h1>
+              <p>Title here</p>
+            </span>
+          </div>
+          <div className="border rounded-md">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
+                alt="crew-image"
+                className="w-full object-contain"
+              />
+              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
+                <PlusCircle />
+              </div>
+            </div>
+            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+              <h1 className="text-xl font-bold">Name here</h1>
+              <p>Title here</p>
+            </span>
+          </div>
+          <div className="border rounded-md">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
+                alt="crew-image"
+                className="w-full object-contain"
+              />
+              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
+                <PlusCircle />
+              </div>
+            </div>
+            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+              <h1 className="text-xl font-bold">Name here</h1>
+              <p>Title here</p>
+            </span>
+          </div>
+          <div className="border rounded-md">
+            <div className="relative">
+              <img
+                src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
+                alt="crew-image"
+                className="w-full object-contain"
+              />
+              <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
+                <PlusCircle />
+              </div>
+            </div>
+            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+              <h1 className="text-xl font-bold">Name here</h1>
+              <p>Title here</p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
