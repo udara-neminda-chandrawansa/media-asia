@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Landing = () => {
+function Landing() {
   const services = [
     { id: 1, title: "Technology." },
     { id: 2, title: "Marketing & Sales." },
@@ -29,6 +29,28 @@ const Landing = () => {
     },
   ];
 
+  const [visibleCards, setVisibleCards] = useState(cards);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        setVisibleCards(cards.slice(0, 1));
+      } else if (window.matchMedia("(max-width: 1023px)").matches) {
+        setVisibleCards(cards.slice(0, 2));
+      } else {
+        setVisibleCards(cards);
+      }
+    };
+
+    window.addEventListener("resize", checkScreenWidth);
+
+    checkScreenWidth();
+
+    return () => {
+      window.removeEventListener("resize", checkScreenWidth);
+    };
+  }, []);
+
   return (
     <div
       className="relative min-h-[85dvh] bg-cover bg-center"
@@ -36,13 +58,13 @@ const Landing = () => {
         backgroundImage: `url(${"https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/image-two-1.jpg"})`,
       }}
     >
-      {/*backdrop*/}
+      {/* Backdrop */}
       <div className="absolute w-full h-full bg-black opacity-70"></div>
       {/* Hero Content */}
-      <div className="px-12 py-16 mx-auto max-w-7xl">
-        <div className="grid grid-cols-2 gap-12">
-          <div className="relative z-10 space-y-8">
-            <h1 className="text-6xl font-bold leading-tight text-white">
+      <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[60dvh] flex items-center">
+        <div className="grid gap-12 xl:grid-cols-2">
+          <div className="relative z-10 flex flex-col gap-6">
+            <h1 className="text-6xl font-bold leading-tight text-white max-md:text-5xl max-sm:text-4xl">
               Business Growing
               <br />
               With <span className="text-[#d70e1d]">Technology</span>
@@ -50,14 +72,17 @@ const Landing = () => {
 
             <div className="grid grid-cols-2 gap-4">
               {services.map((service) => (
-                <div key={service.id} className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#d70e1d] rounded-full" />
-                  <span className="text-white">{service.title}</span>
+                <div
+                  key={service.id}
+                  className="flex items-center max-xl:w-[300px] max-md:w-fit"
+                >
+                  <div className="w-2 h-2 bg-[#d70e1d] rounded-full mr-3" />
+                  <span className="text-white max-sm:text-sm">{service.title}</span>
                 </div>
               ))}
             </div>
 
-            <button className="px-6 py-3 text-white transition-colors bg-[#d70e1d] rounded-md hover:bg-orange-600">
+            <button className="px-6 py-3 w-fit text-white transition-colors bg-[#d70e1d] rounded-md hover:bg-red-600">
               View Details
             </button>
           </div>
@@ -66,9 +91,9 @@ const Landing = () => {
 
       {/* Service Cards */}
       <div className="absolute bottom-0 left-0 right-0 bg-transparent">
-        <div className="px-12 pb-8 mx-auto max-w-7xl">
-          <div className="grid grid-cols-3 gap-6">
-            {cards.map((card, index) => (
+        <div className="px-12 pb-8 mx-auto max-sm:pb-6 max-sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
+            {visibleCards.map((card, index) => (
               <div
                 key={card.title}
                 className={`p-6 rounded-lg ${
@@ -85,19 +110,19 @@ const Landing = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="absolute bottom-20 left-1">
+      <div className="absolute left-0 pl-6 max-sm:pl-1 bottom-20">
         <button className="p-2 transition-colors bg-gray-200 rounded-full hover:bg-gray-300">
           <ChevronLeft className="w-6 h-6" />
         </button>
       </div>
-      <div className="absolute bottom-20 right-1">
+      <div className="absolute right-0 pr-6 max-sm:pr-1 bottom-20">
         <button className="p-2 transition-colors bg-gray-200 rounded-full hover:bg-gray-300">
           <ChevronRight className="w-6 h-6" />
         </button>
       </div>
 
       {/* Social Media Links */}
-      <div className="fixed space-y-4 -translate-y-1/2 right-12 top-1/2">
+      <div className="fixed flex flex-col gap-3 -translate-y-1/2 right-12 top-1/2 max-md:hidden">
         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -149,6 +174,6 @@ const Landing = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Landing;
