@@ -1,14 +1,41 @@
 import { useState, useEffect } from "react";
+import React from "react";
 import {
   CircleCheck,
   Users,
   Clock,
   Headphones,
   DollarSign,
+  Search,
+  ClipboardList,
+  Target,
 } from "lucide-react";
 import chart from "../assets/images/landing/chart.png";
 
 function Landing() {
+  const processes = [
+    {
+      id: "01",
+      icon: Search,
+      title: "Research",
+    },
+    {
+      id: "02",
+      icon: ClipboardList,
+      title: "Note",
+    },
+    {
+      id: "03",
+      icon: Target,
+      title: "Plan",
+    },
+    {
+      id: "04",
+      icon: Users,
+      title: "Impliment",
+    },
+  ];
+
   const services = [
     { id: 1, title: "Technology." },
     { id: 2, title: "Marketing & Sales." },
@@ -298,6 +325,7 @@ function Landing() {
           </div>
         </div>
       </div>
+      {/*experiance*/}
       <div className="w-full max-w-6xl mx-auto px-4 py-12">
         {/* Header Section */}
         <div className="text-center mb-16 nunito">
@@ -385,6 +413,71 @@ function Landing() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/*video*/}
+      <div className="h-[40dvh] bg-gray-300 flex justify-center items-center">
+        <p>video here</p>
+      </div>
+      {/*process*/}
+      <div className="w-full max-w-6xl mx-auto px-4 py-16 nunito">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+              Working Process
+              <span className="flex ">
+                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+              </span>
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <span>Our Working </span>
+            <span className="text-[#d70e1d]">Process</span>
+          </h2>
+        </div>
+
+        {/* Process Steps */}
+        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12 md:gap-8">
+          {processes.map((process, index) => (
+            <React.Fragment key={process.id}>
+              {/* Process Item */}
+              <div className="relative group">
+                {/* Background Box */}
+                <div className="bg-[#d70e1d]/10 hover:bg-[#d70e1d]/30 transition-all delay-75 hover:text-white cursor-pointer p-8 md:p-12 rounded-lg">
+                  {/* Step Number */}
+                  <div className="absolute top-4 left-4 text-2xl text-gray-300 font-bold">
+                    <p>{process.id}</p>
+                  </div>
+
+                  {/* Icon Circle */}
+                  <div className="relative">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-[#d70e1d] flex items-center justify-center">
+                      <process.icon className="w-8 h-8 text-[#d70e1d]" />
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-center mt-4">
+                    {process.title}
+                  </h3>
+                </div>
+
+                {/* Connector Line
+                {index < processes.length - 1 && (
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 border-t-2 border-dashed border-[#d70e1d]/20">
+                    <div className="absolute -right-1 -top-1 w-2 h-2 border-t-2 border-r-2 border-[#d70e1d]/20 rotate-45" />
+                  </div>
+                )}
+                   */}
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </div>
