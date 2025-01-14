@@ -47,7 +47,7 @@ const MarketingServices = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col p-6 space-y-4 transition-colors duration-300 border rounded-lg cursor-pointer hover:bg-gray-800 hover:text-white"
+            className="flex flex-col p-6 space-y-4 transition-colors duration-300 border rounded-lg cursor-pointer"
           >
             <h2 className="text-xl font-medium md:text-2xl">{service.title}</h2>
             <p className="text-sm leading-relaxed text-justify md:text-base">

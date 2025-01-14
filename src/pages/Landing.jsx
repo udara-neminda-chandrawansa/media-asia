@@ -3,7 +3,7 @@ import React from "react";
 
 import MarketingServices from "../components/ExpertiseGrid";
 
-import contact_img from "../assets/images/landing/contact-us.png";
+import contact_img from "../assets/images/landing/contact.jpg";
 
 import s1 from "../assets/images/services/1.png";
 import s2 from "../assets/images/services/2.png";
@@ -13,13 +13,11 @@ import s5 from "../assets/images/services/5.png";
 import s6 from "../assets/images/services/6.png";
 
 import {
-  Phone,
   ChevronLeft,
   ChevronRight,
   CircleCheck,
   Users,
   Headphones,
-  DollarSign,
   Search,
   ClipboardList,
   Target,
@@ -27,8 +25,6 @@ import {
   Award,
   Crown,
   PlusCircle,
-  Mail,
-  Settings,
   PartyPopper,
   Code,
 } from "lucide-react";
@@ -185,8 +181,6 @@ function Landing() {
       icon: "⚙️",
     },
   ];
-
-  const [selectedCard, setSelectedCard] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
