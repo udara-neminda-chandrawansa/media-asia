@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, User, Building } from "lucide-react";
+import { Mail, Phone, User, Building, Search } from "lucide-react";
 import banner from "../assets/images/contact/banner.jpg";
 import { Link } from "wouter";
 
@@ -31,8 +31,7 @@ const ContactForm = () => {
             <span className="text-[#d70e1d]">◆</span>
           </p>
           <h1 className="mt-2 text-3xl font-bold md:text-4xl">
-            Contact With <span className="text-[#d70e1d]">Exper</span>
-            <span className="text-[#d70e1d]">ties</span>
+            Contact With <span className="text-[#d70e1d]">Media Asia</span>
           </h1>
         </div>
 
@@ -90,10 +89,8 @@ const ContactForm = () => {
           <div className="space-y-6 lg:w-72">
             <div>
               <h2 className="mb-4 text-2xl font-bold">Working Hours:</h2>
-              <p className="text-gray-600">Mon to Sat : 8am- 9pm</p>
-              <p className="text-gray-600">
-                Sunday : <span className="text-[#d70e1d]">Closed</span>
-              </p>
+              <p className="text-gray-600">Weekdays - 9AM to 5PM</p>
+              <p className="text-gray-600">Saturday - 9 AM to 2 PM</p>
             </div>
 
             <div className="space-y-4">
@@ -117,7 +114,7 @@ const ContactForm = () => {
                   <p className="px-4 py-1 text-sm text-white rounded-full bg-gradient-to-r from-[#d70e1d] to-[#d70e1d]">
                     Email Now
                   </p>
-                  <p className="text-gray-600">talk@mediaasia.lk</p>
+                  <a href="mailto:talk@mediaasia.lk" className="text-gray-600">talk@mediaasia.lk</a>
                 </div>
               </div>
             </div>
@@ -135,7 +132,7 @@ const ContactForm = () => {
             placeholder="Search..."
           />
           <button className="flex items-center justify-center px-3 py-2 text-gray-600 bg-white rounded-lg w-fit h-fit">
-            Submit
+            <Search/>
           </button>
         </div>
         <div className="flex flex-col gap-6 p-6 text-white bg-gray-700">

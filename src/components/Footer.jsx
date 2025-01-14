@@ -130,7 +130,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold">Business Hours</h3>
             <ul className="space-y-3">
               <li className="text-gray-400">Weekdays - 9AM to 5PM</li>
-              <li className="text-gray-400">Saturday- 9 AM to 2 PM</li>
+              <li className="text-gray-400">Saturday - 9 AM to 2 PM</li>
               <li className="p-2"></li>
             </ul>
           </div>
@@ -149,7 +149,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="pt-8 text-center text-gray-400 border-t border-gray-800">
-          <p>Working Progress by Silicon Radon Networks (Pvt) Ltd</p>
+          <p>2025 © All Rights Reserved | Media Asia | Designed & Developed by Silicon Radon Networks (Pvt) Ltd.</p>
         </div>
       </div>
     </footer>

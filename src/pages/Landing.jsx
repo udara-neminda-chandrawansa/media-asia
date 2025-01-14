@@ -228,18 +228,18 @@ function Landing() {
         {/* Backdrop */}
         <div className="absolute w-full h-full bg-black opacity-70"></div>
         {/* Hero Content */}
-        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[65dvh] flex items-center">
+        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[65dvh] max-sm:h-[85dvh] flex items-center xl:w-2/3">
           <div className="grid gap-12 max-[425px]:gap-6">
             <div className="relative z-10 flex flex-col gap-6">
               <h1 className="text-6xl font-bold leading-tight text-white max-md:text-5xl max-sm:text-4xl">
                 <span className="text-[#d70e1d]">Media Asia </span>Networks
               </h1>
 
-              <div className="grid grid-cols-3 gap-4 max-[425px]:gap-2">
+              <div className="grid grid-cols-3 max-sm:grid-cols-2 gap-4 max-[425px]:gap-2">
                 {services.map((service) => (
                   <div
                     key={service.id}
-                    className="flex items-center max-xl:w-[300px] max-md:w-fit"
+                    className="flex items-center w-fit"
                   >
                     <div className="text-[#d70e1d] mr-3">
                       <CircleCheck />
@@ -268,19 +268,14 @@ function Landing() {
         </div>
 
         {/* Service Cards */}
-        <div className="absolute bottom-0 left-0 right-0 bg-transparent cursor-pointer">
+        <div className="absolute bottom-0 left-0 right-0 bg-transparent cursor-pointer max-sm:hidden">
           <div className="px-12 pb-6 mx-auto max-sm:px-6 max-w-7xl">
             <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
               {cards.map((card, index) => (
                 <div
                   key={card.title}
                   id={card.cid}
-                  className={`p-6 flex items-center gap-6 transition-all rounded-lg ${
-                    index === selectedCard
-                      ? "bg-[#d70e1d] text-white"
-                      : "bg-white"
-                  }`}
-                  onClick={() => setSelectedCard(index)}
+                  className={`p-6 flex items-center gap-6 transition-all rounded-lg bg-white`}
                 >
                   <div className="text-3xl">{card.icon}</div>
                   <div>
