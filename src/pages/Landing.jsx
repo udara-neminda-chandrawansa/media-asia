@@ -250,8 +250,8 @@ function Landing() {
                   </div>
                 ))}
               </div>
-              <div className="flex items-center justify-between gap-3">
-                <p className="w-2/3 text-justify text-white">
+              <div className="flex flex-col items-start justify-between gap-3">
+                <p className="text-justify text-white">
                   Experts in Digital Reels, Viral Videos, Influencer Marketing,
                   AI Productions, and Social Media Strategies for FB, Instagram,
                   TikTok, and CGI Marketing.
