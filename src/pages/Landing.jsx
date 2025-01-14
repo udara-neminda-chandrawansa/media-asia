@@ -1,14 +1,24 @@
 import { useState, useEffect } from "react";
 import React from "react";
+
+import CommentForm from "../components/CommentsForm";
+import MarketingServices from "../components/ExpertiseGrid";
+
 import contact_img from "../assets/images/landing/contact-us.png";
-import blog from "../assets/images/landing/blog.jpg";
+
+import s1 from "../assets/images/services/1.png";
+import s2 from "../assets/images/services/2.png";
+import s3 from "../assets/images/services/3.png";
+import s4 from "../assets/images/services/4.png";
+import s5 from "../assets/images/services/5.png";
+import s6 from "../assets/images/services/6.png";
+
 import {
   Phone,
   ChevronLeft,
   ChevronRight,
   CircleCheck,
   Users,
-  Clock,
   Headphones,
   DollarSign,
   Search,
@@ -23,6 +33,8 @@ import {
   MessageCircle,
   ArrowRight,
   User,
+  PartyPopper,
+  Code,
 } from "lucide-react";
 import chart from "../assets/images/landing/chart.png";
 
@@ -30,21 +42,51 @@ function Landing() {
   const blogs = [
     {
       id: 1,
-      date: "5 May, 2023",
-      image: blog,
-      author: "Shafiqul",
-      comments: 3,
-      title: "Elevating Portfolio of Digital Marketing Excellence",
-      category: "Marketing",
+      price: "900,000 LKR Upwards",
+      image: s1,
+      title: "Hoardings & Billboards",
+      content:
+        "We provide impactful, local coverage with maximum visibility on key urban streets and main roads, making our outdoor advertising modules ideal for achieving widespread brand recognition.",
     },
     {
       id: 2,
-      date: "1 May, 2023",
-      image: blog,
-      author: "Shafiqul",
-      comments: 0,
-      title: "Examining Effective Business A Case Study Approach",
-      category: "Business",
+      price: "650,000 LKR upwards",
+      image: s2,
+      title: "Bus Shelter Advertising",
+      content:
+        "Our eye-level outdoor advertising modules effectively reach a diverse audience in their daily routines, ensuring optimal visibility. We identify the best locations for your target audience and recommend the ideal sites for your brand campaign.",
+    },
+    {
+      id: 3,
+      price: "400,000 LKR Upwards",
+      image: s3,
+      title: "Store Branding",
+      content:
+        "We specialize in store and outlet branding in Kandy, Sri Lanka, using acrylic plastic letters, vacuum letters, flex, and digital stickers. Our premium quality indoor branding solutions enhance your business's visibility and appeal.",
+    },
+    {
+      id: 4,
+      price: "150,000 LKR Upwards",
+      image: s4,
+      title: "Events & Activation",
+      content:
+        "We are a leading brand activation agency in Sri Lanka's Central Province, offering dynamic street promotions, food events, sports events, and music collaborations to engage audiences and elevate brand experiences.",
+    },
+    {
+      id: 5,
+      price: "200,000 LKR Upwards",
+      image: s5,
+      title: "Leading Bus and Train Advertising Agency",
+      content:
+        "Media Asia is one of the largest providers of bus, train, and highway advertising in the Central Province, offering extensive coverage to engage audiences on the move. Our strategic placements across key transport routes ensure maximum visibility for brands throughout the region.",
+    },
+    {
+      id: 6,
+      price: "45,000 LKR Upwards",
+      image: s6,
+      title: "Brand Experience",
+      content:
+        "We create impactful brand experiences that resonate with audiences, capturing hearts and minds. Whether building brand awareness, driving consideration, or launching a new product, our carefully crafted moments in key locations ensure your brand objectives are achieved effectively.",
     },
   ];
   const skills = [
@@ -114,32 +156,38 @@ function Landing() {
   ];
 
   const services = [
-    { id: 1, title: "Technology." },
-    { id: 2, title: "Marketing & Sales." },
-    { id: 3, title: "Human Resources." },
-    { id: 4, title: "Business Strategy." },
-    { id: 5, title: "Management." },
-    { id: 6, title: "Financial Advisory." },
+    { id: 1, title: "Strategic Marketing" },
+    { id: 2, title: "Advertising" },
+    { id: 3, title: "Outdoor Branding" },
+    { id: 4, title: "PR & CSR" },
+    { id: 5, title: "TV & Radio Media Buying" },
+    { id: 6, title: "Creative Services" },
+    { id: 7, title: "SMM & Digital Marketing" },
+    { id: 8, title: "OOH" },
+    { id: 9, title: "Events & Activations" },
   ];
 
   const cards = [
     {
       cid: "card-1",
-      title: "Management",
-      description: "Efficiently leading and guiding for optimal results.",
+      title: "Understanding",
+      description:
+        "Understanding your audience through in-depth research and analysis.",
       icon: "🔥",
     },
     {
       cid: "card-2",
-      title: "Technology",
-      description: "Driving progress with cutting-edge technology.",
-      icon: "⚙️",
+      title: "Strategy",
+      description:
+        "Involves crafting a comprehensive plan that aligns creative ideas with your brand's goals.",
+      icon: "🧠",
     },
     {
       cid: "card-3",
-      title: "Finance",
-      description: "Managing money and financial activities effectively.",
-      icon: "💰",
+      title: "Execution",
+      description:
+        "Seamless activation of strategies, delivering tailored results that resonate with your brand.",
+      icon: "⚙️",
     },
   ];
 
@@ -185,16 +233,14 @@ function Landing() {
         {/* Backdrop */}
         <div className="absolute w-full h-full bg-black opacity-70"></div>
         {/* Hero Content */}
-        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[60dvh] flex items-center">
-          <div className="grid gap-12 xl:grid-cols-2">
+        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[60dvh] max-[425px]:h-[65dvh] flex items-center">
+          <div className="grid gap-12 max-[425px]:gap-6 xl:grid-cols-2">
             <div className="relative z-10 flex flex-col gap-6">
               <h1 className="text-6xl font-bold leading-tight text-white max-md:text-5xl max-sm:text-4xl">
-                Business Growing
-                <br />
-                With <span className="text-[#d70e1d]">Technology</span>
+                <span className="text-[#d70e1d]">Media Asia </span>Networks
               </h1>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 max-[425px]:gap-2">
                 {services.map((service) => (
                   <div
                     key={service.id}
@@ -203,16 +249,19 @@ function Landing() {
                     <div className="text-[#d70e1d] mr-3">
                       <CircleCheck />
                     </div>
-                    <span className="text-white max-sm:text-sm">
+                    <span className="text-white max-sm:text-sm max-[425px]:text-xs">
                       {service.title}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <button className="px-6 py-3 w-fit text-[#d70e1d] transition-colors bg-transparent border-2 border-[#d70e1d] rounded-md hover:bg-[#d70e1d] hover:text-white">
-                View Details
-              </button>
+              <a
+                href="https://www.instagram.com/mediaasia_lk/"
+                className="px-6 py-3 w-fit text-[#d70e1d] transition-colors bg-transparent border-2 border-[#d70e1d] rounded-md hover:bg-[#d70e1d] hover:text-white"
+              >
+                Follow Us
+              </a>
             </div>
           </div>
         </div>
@@ -308,82 +357,115 @@ function Landing() {
         </div>
       </div>
       {/*About*/}
-      <div className="flex flex-col gap-6 px-12 py-20 max-md:p-6 nunito">
+      <div className="flex flex-col gap-6 px-12 py-12 max-md:p-6 nunito">
         {/*about company*/}
         <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
           <span className="flex ">
             <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
           </span>
-          About Company
+          About Media Asia
           <span className="flex ">
             <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
           </span>
         </span>
         <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable
-          the majority have suffered alteration.
+          We are an independent full-funnel advertising and marketing agency
+          with offices in Kandy and Nuwara Eliya. Our approach breaks away from
+          traditional agency-brand barriers and outdated models, fostering
+          fluid, collaborative relationships free from knowledge silos. We offer
+          seamless, integrated solutions that drive innovation and growth for
+          our clients.
         </p>
+        <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+          <span className="flex ">
+            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          </span>
+          Approach
+          <span className="flex ">
+            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          </span>
+        </span>
+        <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg">
+          We approach every brand by first gaining a deep understanding of its
+          audience and their behaviors, using thorough research and leveraging
+          your valuable data. With a complete picture in place, we craft a
+          strategic plan that spans from creative development to activation,
+          ensuring impactful results tailored to your brand’s needs.
+        </p>
+        <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
+          <span className="flex ">
+            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          </span>
+          Our Stats
+          <span className="flex ">
+            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          </span>
+        </span>
         <div className="flex justify-center">
-          <ul className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-12">
-            <li>
+          <ul className="grid grid-cols-4 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
+            <li className="flex flex-col items-center">
               <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  99%
+                  11
                 </p>
               </div>
-              <p className="p-2 text-center">TextTextTextText</p>
+              <p className="p-2 text-center">Years in Business</p>
             </li>
-            <li>
+            <li className="flex flex-col items-center">
               <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  99%
+                  2.9K+
                 </p>
               </div>
-              <p className="p-2 text-center">TextTextTextText</p>
+              <p className="p-2 text-center">Projects successfully completed</p>
             </li>
-            <li>
+            <li className="flex flex-col items-center">
               <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  99%
+                  251
                 </p>
               </div>
-              <p className="p-2 text-center">TextTextTextText</p>
+              <p className="p-2 text-center">Client Network</p>
             </li>
-            <li>
+            <li className="flex flex-col items-center">
               <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  99%
+                  6.3K+
                 </p>
               </div>
-              <p className="p-2 text-center">TextTextTextText</p>
+              <p className="p-2 text-center">Campaigns</p>
             </li>
           </ul>
         </div>
       </div>
+      {/*Expertise grid*/}
+      <MarketingServices/>
       {/*case study*/}
-      <div className="flex flex-col gap-6 px-12 pb-20 max-md:p-6 nunito">
+      <div className="flex-col hidden gap-6 px-12 pb-20 max-md:p-6 nunito">
         {/*case syudy*/}
         <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
           <span className="flex ">
             <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
           </span>
           Case Study
           <span className="flex ">
             <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
           </span>
         </span>
         {/*big title*/}
-        <h1 className="text-4xl md:text-5xl font-bold">
+        <h1 className="text-4xl font-bold md:text-5xl">
           Our <span className="text-[#d70e1d]">Case Study</span>
         </h1>
         {/*card container*/}
-        <div className="flex gap-12 justify-center max-lg:flex-col">
+        <div className="flex justify-center gap-12 max-lg:flex-col">
           <div className="bg-gray-300 h-[500px] lg:w-1/2 relative">
             <div className="absolute bg-[#d70e1d]/80 text-white rounded-lg h-25 flex justify-center px-6 lg:-bottom-10 max-lg:bottom-10 lg:w-4/5 lg:left-6 flex-col">
               <p className="text-lg">text</p>
@@ -402,90 +484,105 @@ function Landing() {
           </div>
         </div>
       </div>
-      {/*experiance*/}
-      <div className="w-full max-w-6xl mx-auto px-4 py-12">
+      {/*facilities*/}
+      <div className="w-full px-12 pb-12 mx-auto max-md:p-6 max-md:pt-0">
         {/* Header Section */}
-        <div className="text-center mb-16 nunito">
+        <div className="mb-12 text-center max-md:mb-6 nunito">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
               Why Choose Us
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
             <span>Our </span>
-            <span className="text-[#d70e1d]">Experiences</span>
-            <span> On Era</span>
+            <span className="text-[#d70e1d]">Facilities</span>
           </h2>
+          <p className="max-md:text-justify max-md:text-sm">
+          The agency owns the best digital AV production and graphic studio in Kandy, offering cutting-edge services in video production, animation, and graphic design. Equipped with the latest technology and staffed by a team of creative professionals, the studio produces high-quality digital content tailored to meet the needs of modern advertising campaigns. Whether it's for TV commercials, social media content, corporate videos, or graphic design projects, our studio complex delivers visually stunning and impactful media that helps brands stand out in a competitive market. This in-house capability ensures efficient project management and top-tier creative output.
+          <br /><br />
+          “Trusted Sri Lankan Agency Delivering Tailored Multi-Channel Digital Marketing Solutions for Businesses of All Sizes”
+          </p>
         </div>
 
         {/* Main Content Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center nunito">
+        <div className="grid items-center grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
           {/* Left Column */}
-          <div className="space-y-8">
+          <div className="flex flex-col gap-6">
+            <div className="flex items-start gap-6">
+              <div className="bg-[#d70e1d] p-3 rounded-lg">
+                <Headphones className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="mb-2 text-xl font-bold">
+                  Cutting-Edge Digital & AV Studio in Kandy.
+                </h3>
+                <p className="text-justify text-gray-600">
+                  Kandy’s only multi-cultural agency, featuring world-class
+                  local and international designers, content creators, and
+                  bloggers, delivering diverse and innovative creative
+                  solutions.
+                </p>
+              </div>
+            </div>
+
             <div className="flex items-start gap-4">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Client Satisfaction.</h3>
-                <p className="text-gray-600">
-                  Various versions have evolved over the years.
+                <h3 className="mb-2 text-xl font-bold">
+                  Local and International Content Creators Powering Our Agency.
+                </h3>
+                <p className="text-justify text-gray-600">
+                  The only advertising agency with a trilingual creative team
+                  and partnerships for foreign language content creation,
+                  ensuring diverse and multilingual marketing solutions.
                 </p>
               </div>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-[#d70e1d] p-3 rounded-lg">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Experience Team.</h3>
-                <p className="text-gray-600">
-                  Various versions have evolved over the years.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Center Column - Pie Chart */}
-          <div className="flex justify-center">
-            <img
-              src={chart}
-              alt="Experience Chart"
-              className="w-full max-w-[300px]"
-            />
           </div>
 
           {/* Right Column */}
-          <div className="space-y-8">
+          <div className="flex flex-col gap-6">
             <div className="flex items-start gap-4">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
-                <DollarSign className="w-6 h-6 text-white" />
+                <Code className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">On-time & Budget</h3>
-                <p className="text-gray-600">
-                  Various versions have evolved over the years.
+                <h3 className="mb-2 text-xl font-bold">
+                  Utilizing Premium Editing Software and Tools for Top-Notch
+                  Results.
+                </h3>
+                <p className="text-justify text-gray-600">
+                  The agency employs the latest software for AV editing and
+                  design, leveraging advanced operating systems to deliver
+                  cutting-edge creative solutions.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
-                <Headphones className="w-6 h-6 text-white" />
+                <PartyPopper className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">24/7 Support Team.</h3>
-                <p className="text-gray-600">
-                  Various versions have evolved over the years.
+                <h3 className="mb-2 text-xl font-bold">
+                  Your Top Choice for International Standard Events in Sri
+                  Lanka.
+                </h3>
+                <p className="text-justify text-gray-600">
+                  Media Asia collaborates with both foreign and local event
+                  agencies and production houses, specializing in international
+                  events, music, and sports programs to deliver exceptional
+                  experiences.
                 </p>
               </div>
             </div>
@@ -493,34 +590,34 @@ function Landing() {
         </div>
       </div>
       {/*video*/}
-      <div className="h-[40dvh] bg-gray-300 flex justify-center items-center">
+      <div className="h-[40dvh] bg-gray-300 hidden justify-center items-center">
         <p>video here</p>
       </div>
       {/*process*/}
-      <div className="w-full max-w-6xl mx-auto px-4 py-16 nunito">
+      <div className="hidden w-full px-12 pb-16 mx-auto max-md:p-6 nunito">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center max-md:mb-6">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
               Working Process
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl font-bold md:text-5xl">
             <span>Our Working </span>
             <span className="text-[#d70e1d]">Process</span>
           </h2>
         </div>
 
         {/* Process Steps */}
-        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12 md:gap-8">
+        <div className="grid grid-cols-4 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1 md:gap-8">
           {processes.map((process, index) => (
             <React.Fragment key={process.id}>
               {/* Process Item */}
@@ -528,7 +625,7 @@ function Landing() {
                 {/* Background Box */}
                 <div className="bg-[#d70e1d]/10 hover:bg-[#d70e1d]/30 transition-all delay-75 hover:text-white cursor-pointer p-8 md:p-12 rounded-lg">
                   {/* Step Number */}
-                  <div className="absolute top-4 left-4 text-2xl text-gray-300 font-bold">
+                  <div className="absolute text-2xl font-bold text-gray-300 top-4 left-4">
                     <p>{process.id}</p>
                   </div>
 
@@ -540,7 +637,7 @@ function Landing() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-center mt-4">
+                  <h3 className="mt-4 text-xl font-bold text-center">
                     {process.title}
                   </h3>
                 </div>
@@ -558,38 +655,38 @@ function Landing() {
         </div>
       </div>
       {/*skills*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+      <div className="hidden w-full px-12 pb-16 mx-auto max-md:p-6 max-md:pt-0 nunito">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 max-md:mb-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
               Our Skills
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl font-bold md:text-5xl">
             Get <span className="text-[#d70e1d]">Professional</span> Services
           </h2>
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 max-md:gap-6 lg:grid-cols-2">
           {/* Left Column - Skills */}
           <div className="space-y-8">
             {skills.map((skill) => (
               <div key={skill.name} className="space-y-2">
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <span className="font-medium">{skill.name}</span>
                   <span className="text-[#d70e1d]">{skill.percentage}%</span>
                 </div>
-                <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-3 overflow-hidden bg-gray-100 rounded-full">
                   <div
                     className="h-full bg-[#d70e1d] rounded-full relative"
                     style={{ width: `${skill.percentage}%` }}
@@ -601,9 +698,9 @@ function Landing() {
             ))}
 
             {/* Awards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 gap-6 mt-12 max-md:mt-6 md:grid-cols-3">
               {awards.map((award) => (
-                <div key={award.title} className="text-center space-y-3">
+                <div key={award.title} className="space-y-3 text-center">
                   <div className="w-24 h-24 mx-auto border-2 border-[#d70e1d]/20 rounded-full flex items-center justify-center">
                     <award.icon className="w-10 h-10 text-[#d70e1d]" />
                   </div>
@@ -622,48 +719,48 @@ function Landing() {
               <img
                 src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/skill-bg-min.jpg"
                 alt="Professional at work"
-                className="rounded-lg w-full h-auto object-cover"
+                className="object-cover w-full h-auto rounded-lg"
               />
             </div>
           </div>
         </div>
       </div>
       {/*team*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+      <div className="hidden w-full px-12 pb-16 mx-auto max-md:p-6 max-md:pt-0 nunito">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 max-md:mb-6">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
               Media Asia Expertise
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl font-bold md:text-5xl">
             Expert Team <span className="text-[#d70e1d]">Available</span>
           </h2>
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12">
+        <div className="grid grid-cols-4 gap-12 max-md:gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
           <div className="border rounded-md">
             <div className="relative">
               <img
                 src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
                 alt="crew-image"
-                className="w-full object-contain"
+                className="object-contain w-full"
               />
               <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
                 <PlusCircle />
               </div>
             </div>
-            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+            <span className="flex flex-col p-6 text-black bg-white rounded-md">
               <h1 className="text-xl font-bold">Name here</h1>
               <p>Title here</p>
             </span>
@@ -673,13 +770,13 @@ function Landing() {
               <img
                 src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
                 alt="crew-image"
-                className="w-full object-contain"
+                className="object-contain w-full"
               />
               <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
                 <PlusCircle />
               </div>
             </div>
-            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+            <span className="flex flex-col p-6 text-black bg-white rounded-md">
               <h1 className="text-xl font-bold">Name here</h1>
               <p>Title here</p>
             </span>
@@ -689,13 +786,13 @@ function Landing() {
               <img
                 src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
                 alt="crew-image"
-                className="w-full object-contain"
+                className="object-contain w-full"
               />
               <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
                 <PlusCircle />
               </div>
             </div>
-            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+            <span className="flex flex-col p-6 text-black bg-white rounded-md">
               <h1 className="text-xl font-bold">Name here</h1>
               <p>Title here</p>
             </span>
@@ -705,13 +802,13 @@ function Landing() {
               <img
                 src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/team-one-4.png"
                 alt="crew-image"
-                className="w-full object-contain"
+                className="object-contain w-full"
               />
               <div className="absolute bottom-0 text-white bg-[#d70e1d]/80 p-2">
                 <PlusCircle />
               </div>
             </div>
-            <span className="bg-white text-black p-6 flex flex-col rounded-md">
+            <span className="flex flex-col p-6 text-black bg-white rounded-md">
               <h1 className="text-xl font-bold">Name here</h1>
               <p>Title here</p>
             </span>
@@ -719,23 +816,23 @@ function Landing() {
         </div>
       </div>
       {/*testimonials*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+      <div className="hidden w-full px-12 pb-16 mx-auto max-md:p-6 max-md:pt-0 nunito">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center max-md:mb-6">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
               Testimonials
               <span className="flex ">
                 <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
+                <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
               </span>
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl font-bold md:text-5xl">
             <span>What’s The </span>
             <span className="text-[#d70e1d]">Client </span>
             Say
@@ -760,7 +857,7 @@ function Landing() {
                   {/* card */}
                   <div className="p-8 md:p-12 max-sm:p-0 max-md:h-[40dvh] h-[30dvh] flex flex-col justify-between">
                     {/* testimonial text*/}
-                    <div className="text-lg md:text-xl font-semibold">
+                    <div className="text-lg font-semibold md:text-xl">
                       <p className="text-justify">{process.text}</p>
                     </div>
                     <div>
@@ -772,7 +869,7 @@ function Landing() {
                       </div>
 
                       {/* author */}
-                      <h3 className="text-xl font-bold text-center mt-1">
+                      <h3 className="mt-1 text-xl font-bold text-center">
                         {process.name}
                       </h3>
                     </div>
@@ -782,7 +879,7 @@ function Landing() {
             ))}
           </div>
           <button
-            className="carousel-control-prev text-black justify-end items-end max-md:hidden"
+            className="items-end justify-end text-black carousel-control-prev max-md:hidden"
             type="button"
             data-coreui-target="#carouselExampleControls"
             data-coreui-slide="prev"
@@ -791,7 +888,7 @@ function Landing() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next text-black justify-start items-end max-md:hidden"
+            className="items-end justify-start text-black carousel-control-next max-md:hidden"
             type="button"
             data-coreui-target="#carouselExampleControls"
             data-coreui-slide="next"
@@ -801,54 +898,27 @@ function Landing() {
           </button>
         </div>
       </div>
-      {/*addvr.*/}
-      <div className="lg:h-[30dvh] flex lg:mt-28 w-full max-w-6xl mx-auto px-4 pb-16 nunito">
-        <div className="w-full h-full flex justify-between px-12 bg-red-200 max-lg:py-6">
-          <div className="w-full h-full flex flex-col justify-center gap-3">
-            <h1 className="text-3xl font-bold max-lg:text-center">
-              Do You Need Expert Service?
-            </h1>
-            <p className="text-lg max-lg:text-center">
-              Various versions have evolved over the years sometimes.
-            </p>
-            <div className="flex gap-3">
-              <Phone className="w-12 h-12 p-2 bg-red-400 rounded-full" />
-              <div className="flex flex-col items-start">
-                <span className="">Call Now</span>
-                <span className="">+998-8776345</span>
-              </div>
-            </div>
-          </div>
-          <div className="relative w-full h-full max-lg:hidden">
-            <img
-              src="https://techgen-wp.b-cdn.net/wp-content/uploads/2023/05/expert-1.png"
-              alt=""
-              className=" bottom-0 absolute right-0"
-            />
-          </div>
-        </div>
-      </div>
       {/*clients*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+      <div className="hidden w-full px-12 pb-16 mx-auto max-md:pb-6 max-md:px-6 nunito">
         <p className="text-center">Here 10K+ Comapny Have Connceted With Us</p>
-        <div className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6 mt-6">
-          <div className="bg-gray-300 flex justify-center items-center">
+        <div className="grid grid-cols-4 gap-6 mt-6 max-md:grid-cols-2 max-sm:grid-cols-1">
+          <div className="flex items-center justify-center bg-gray-300">
             client logo here
           </div>
-          <div className="bg-gray-300 flex justify-center items-center">
+          <div className="flex items-center justify-center bg-gray-300">
             client logo here
           </div>
-          <div className="bg-gray-300 flex justify-center items-center">
+          <div className="flex items-center justify-center bg-gray-300">
             client logo here
           </div>
-          <div className="bg-gray-300 flex justify-center items-center">
+          <div className="flex items-center justify-center bg-gray-300">
             client logo here
           </div>
         </div>
       </div>
       {/*contact form*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="w-full px-12 pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito">
+        <div className="grid items-center grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Left Column - Image and Social Icons */}
           <div className="relative max-lg:hidden">
             <img
@@ -861,7 +931,7 @@ function Landing() {
           {/* Right Column - Contact Form */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="mb-4 text-4xl font-bold md:text-5xl">
                 <span>Contact </span>
                 <span className="text-[#d70e1d]">Us Now</span>
               </h2>
@@ -873,7 +943,7 @@ function Landing() {
 
             <form className="space-y-4">
               {/* Name Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="relative">
                   <input
                     type="text"
@@ -887,19 +957,19 @@ function Landing() {
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                    className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
                   <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
               {/* Contact Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="relative">
                   <input
                     type="tel"
                     placeholder="Phone"
-                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                    className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
                   <Phone className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
@@ -908,19 +978,19 @@ function Landing() {
                   <input
                     type="email"
                     placeholder="Email"
-                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                    className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
                   <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
               {/* Service and Budget Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="relative">
                   <input
                     type="text"
                     placeholder="Need Services"
-                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                    className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
                   <Settings className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
@@ -929,7 +999,7 @@ function Landing() {
                   <input
                     type="text"
                     placeholder="Budgets"
-                    className="w-full p-3 bg-orange-50 rounded-lg pl-10"
+                    className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
                   <DollarSign className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
@@ -940,7 +1010,7 @@ function Landing() {
                 <textarea
                   placeholder="Your Message..."
                   rows={4}
-                  className="w-full p-3 bg-orange-50 rounded-lg"
+                  className="w-full p-3 rounded-lg bg-orange-50"
                 />
               </div>
 
@@ -956,68 +1026,69 @@ function Landing() {
         </div>
       </div>
       {/*blog posts*/}
-      <div className="w-full max-w-6xl mx-auto px-4 pb-16 nunito">
+      <div className="w-full px-12 pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="mb-12 text-center max-md:mb-6">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="flex ">
-                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
-              </span>
-              Recent Blogs
-              <span className="flex ">
-                <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-                <span className="w-2 h-2 bg-black rounded-full -ml-1"></span>
-              </span>
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
+            Recent Updates
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Our Latest <span className="text-[#d70e1d]">Blog</span>
+          <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+            <span className="text-[#d70e1d]">Outdoor </span>Advertising
+            Solutions
           </h2>
+          <p className="max-md:text-justify max-md:text-sm">
+            Premier Full-Service Advertising Agency in Kandy with an Extensive
+            and Diverse Portfolio <br />
+            <br />
+            Media Asia Networks, Sri Lanka's Leading Agency for Comprehensive
+            OOH Branding Across Railways, Bus Stands, Roadside Hoardings, Street
+            Names, and Premium Billboard Locations.
+            <br />
+            <br />
+            Our reach has expanded to include the railway network and the
+            largest bus network across major towns nationwide. By integrating
+            outdoor advertising with TV, radio, press, and digital media, our
+            expert digital advertising team offers a comprehensive ‘one-stop’
+            solution for brands, advertising agencies, and advertisers,
+            delivering impactful and cohesive campaigns.
+          </p>
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2">
           {blogs.map((blog) => (
             <div key={blog.id} className="group">
               {/* Image Container */}
-              <div className="relative overflow-hidden rounded-lg mb-4">
+              <div className="relative mb-4 overflow-hidden rounded-lg">
                 <img
                   src={blog.image}
                   alt={blog.title}
                   className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-[#d70e1d] text-white px-3 py-1 rounded-md">
-                  {blog.date}
+                  {blog.price}
                 </div>
               </div>
 
               {/* Content */}
               <div className="space-y-3">
-                {/* Meta Info */}
-                <div className="flex items-center gap-4 text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span className="text-sm">By {blog.author}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MessageCircle className="w-4 h-4" />
-                    <span className="text-sm">({blog.comments}) Comments</span>
-                  </div>
-                </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold hover:text-[#d70e1d] transition-colors">
                   {blog.title}
                 </h3>
 
-                {/* Read More Link */}
-                <div className="pt-2">
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-[#d70e1d] hover:gap-4 gap-2 transition-all"
-                  >
-                    <span>Read More</span>
-                    <ArrowRight className="w-4 h-4" />
+                {/* content */}
+                <div className="">
+                  <a href="#" className="inline-flex items-center text-justify">
+                    <span>{blog.content}</span>
                   </a>
                 </div>
               </div>
@@ -1025,6 +1096,22 @@ function Landing() {
           ))}
         </div>
       </div>
+      {/*newsletter*/}
+      <div className="w-full px-12 pb-16 mx-auto max-md:p-6 max-md:pt-0 nunito">
+        <div className="flex justify-between w-full h-full px-12 py-6 bg-[#d70e1d] text-white">
+          <div className="flex items-center w-full h-full gap-3 justify-evenly max-lg:flex-col">
+            <h1 className="text-3xl font-bold max-lg:text-center">
+              Subscribe to our Newsletter
+            </h1>
+            <div className="flex justify-center gap-3">
+              <a href="mailto:talk@mediaasia.lk" className="bg-white text-[#d70e1d] px-6 rounded-lg flex gap-6 py-3"><Mail/> Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*map*/}
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.039588434427!2d80.636253!3d7.295345000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3662b0fc6e0c7%3A0x3f5e7c76ac4ac8eb!2s63%2C%20Level%2C%203%20Raja%20Veediya%2C%20Kandy%2020000%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1736836602781!5m2!1sen!2sus" allowFullScreen="" loading="lazy" className="w-full h-[400px] px-12 max-md:px-6 border-0 mb-16 max-md:mb-6" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <CommentForm/>
     </div>
   );
 }

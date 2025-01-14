@@ -24,13 +24,13 @@ function Nav() {
               <div className="flex items-center space-x-1">
                 <span className="flex items-center gap-3">
                   <Mail className="text-[#d70e1d]" />
-                  info@example.com
+                  talk@mediaasia.lk
                 </span>
               </div>
               <div className="flex items-center space-x-1">
                 <span className="flex items-center gap-3">
                   <MapPin className="text-[#d70e1d]" />
-                  185 Front St, Brooklyn, New York
+                  63, Level, 3 Raja Veediya, Kandy
                 </span>
               </div>
             </div>
@@ -322,7 +322,7 @@ function Nav() {
             <Phone className="w-6 h-6" />
             <div className="flex flex-col items-start">
               <span className="">Call Now</span>
-              <span className="">+998-8776345</span>
+              <span className="">+94 70 155 1777</span>
             </div>
           </div>
         </div>
