@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
 
-import CommentForm from "../components/CommentsForm";
 import MarketingServices from "../components/ExpertiseGrid";
 
 import contact_img from "../assets/images/landing/contact-us.png";
@@ -30,13 +29,9 @@ import {
   PlusCircle,
   Mail,
   Settings,
-  MessageCircle,
-  ArrowRight,
-  User,
   PartyPopper,
   Code,
 } from "lucide-react";
-import chart from "../assets/images/landing/chart.png";
 
 function Landing() {
   const blogs = [
@@ -233,14 +228,14 @@ function Landing() {
         {/* Backdrop */}
         <div className="absolute w-full h-full bg-black opacity-70"></div>
         {/* Hero Content */}
-        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[60dvh] max-[425px]:h-[65dvh] flex items-center">
-          <div className="grid gap-12 max-[425px]:gap-6 xl:grid-cols-2">
+        <div className="px-12 py-16 max-sm:py-6 max-sm:px-6 h-[65dvh] flex items-center">
+          <div className="grid gap-12 max-[425px]:gap-6">
             <div className="relative z-10 flex flex-col gap-6">
               <h1 className="text-6xl font-bold leading-tight text-white max-md:text-5xl max-sm:text-4xl">
                 <span className="text-[#d70e1d]">Media Asia </span>Networks
               </h1>
 
-              <div className="grid grid-cols-2 gap-4 max-[425px]:gap-2">
+              <div className="grid grid-cols-3 gap-4 max-[425px]:gap-2">
                 {services.map((service) => (
                   <div
                     key={service.id}
@@ -255,20 +250,26 @@ function Landing() {
                   </div>
                 ))}
               </div>
-
-              <a
-                href="https://www.instagram.com/mediaasia_lk/"
-                className="px-6 py-3 w-fit text-[#d70e1d] transition-colors bg-transparent border-2 border-[#d70e1d] rounded-md hover:bg-[#d70e1d] hover:text-white"
-              >
-                Follow Us
-              </a>
+              <div className="flex items-center justify-between gap-3">
+                <p className="w-2/3 text-justify text-white">
+                  Experts in Digital Reels, Viral Videos, Influencer Marketing,
+                  AI Productions, and Social Media Strategies for FB, Instagram,
+                  TikTok, and CGI Marketing.
+                </p>
+                <a
+                  href="https://www.instagram.com/mediaasia_lk/"
+                  className="px-3 py-1 h-fit text-[#d70e1d] flex justify-center items-center transition-colors bg-transparent border-2 border-[#d70e1d] rounded-md hover:bg-[#d70e1d]"
+                >
+                  Follow Us
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Service Cards */}
         <div className="absolute bottom-0 left-0 right-0 bg-transparent cursor-pointer">
-          <div className="px-12 pb-8 mx-auto max-sm:pb-6 max-sm:px-6 max-w-7xl">
+          <div className="px-12 pb-6 mx-auto max-sm:px-6 max-w-7xl">
             <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:grid-cols-1">
               {cards.map((card, index) => (
                 <div
@@ -293,7 +294,7 @@ function Landing() {
         </div>
 
         {/* Social Media Links */}
-        <div className="absolute flex flex-col gap-3 -translate-y-1/2 right-12 top-1/2 max-md:hidden">
+        <div className="absolute flex-col hidden gap-3 top-8 right-12 max-md:hidden">
           <a
             href="https://www.linkedin.com"
             className="flex items-center justify-center w-10 h-10 transition-all delay-75 bg-white rounded-full shadow-lg cursor-pointer hover:text-[#d70e1d]"
@@ -445,7 +446,7 @@ function Landing() {
         </div>
       </div>
       {/*Expertise grid*/}
-      <MarketingServices/>
+      <MarketingServices />
       {/*case study*/}
       <div className="flex-col hidden gap-6 px-12 pb-20 max-md:p-6 nunito">
         {/*case syudy*/}
@@ -506,14 +507,25 @@ function Landing() {
             <span className="text-[#d70e1d]">Facilities</span>
           </h2>
           <p className="max-md:text-justify max-md:text-sm">
-          The agency owns the best digital AV production and graphic studio in Kandy, offering cutting-edge services in video production, animation, and graphic design. Equipped with the latest technology and staffed by a team of creative professionals, the studio produces high-quality digital content tailored to meet the needs of modern advertising campaigns. Whether it's for TV commercials, social media content, corporate videos, or graphic design projects, our studio complex delivers visually stunning and impactful media that helps brands stand out in a competitive market. This in-house capability ensures efficient project management and top-tier creative output.
-          <br /><br />
-          “Trusted Sri Lankan Agency Delivering Tailored Multi-Channel Digital Marketing Solutions for Businesses of All Sizes”
+            The agency owns the best digital AV production and graphic studio in
+            Kandy, offering cutting-edge services in video production,
+            animation, and graphic design. Equipped with the latest technology
+            and staffed by a team of creative professionals, the studio produces
+            high-quality digital content tailored to meet the needs of modern
+            advertising campaigns. Whether it's for TV commercials, social media
+            content, corporate videos, or graphic design projects, our studio
+            complex delivers visually stunning and impactful media that helps
+            brands stand out in a competitive market. This in-house capability
+            ensures efficient project management and top-tier creative output.
+            <br />
+            <br />
+            “Trusted Sri Lankan Agency Delivering Tailored Multi-Channel Digital
+            Marketing Solutions for Businesses of All Sizes”
           </p>
         </div>
 
         {/* Main Content Section */}
-        <div className="grid items-center grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
+        <div className="grid items-start grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
           {/* Left Column */}
           <div className="flex flex-col gap-6">
             <div className="flex items-start gap-6">
@@ -950,7 +962,6 @@ function Landing() {
                     placeholder="First Name"
                     className="w-full p-3 bg-orange-50 rounded-lg pr-[30px]"
                   />
-                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
 
                 <div className="relative">
@@ -959,7 +970,6 @@ function Landing() {
                     placeholder="Last Name"
                     className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
-                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
@@ -971,7 +981,6 @@ function Landing() {
                     placeholder="Phone"
                     className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
-                  <Phone className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
 
                 <div className="relative">
@@ -980,7 +989,6 @@ function Landing() {
                     placeholder="Email"
                     className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
-                  <Mail className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
@@ -992,7 +1000,6 @@ function Landing() {
                     placeholder="Need Services"
                     className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
-                  <Settings className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
 
                 <div className="relative">
@@ -1001,7 +1008,6 @@ function Landing() {
                     placeholder="Budgets"
                     className="w-full p-3 pl-10 rounded-lg bg-orange-50"
                   />
-                  <DollarSign className="w-5 h-5 text-[#d70e1d] absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
@@ -1067,7 +1073,7 @@ function Landing() {
           {blogs.map((blog) => (
             <div key={blog.id} className="group">
               {/* Image Container */}
-              <div className="relative mb-4 overflow-hidden rounded-lg">
+              <div className="relative mb-4 overflow-hidden border rounded-lg">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -1096,22 +1102,14 @@ function Landing() {
           ))}
         </div>
       </div>
-      {/*newsletter*/}
-      <div className="w-full px-12 pb-16 mx-auto max-md:p-6 max-md:pt-0 nunito">
-        <div className="flex justify-between w-full h-full px-12 py-6 bg-[#d70e1d] text-white">
-          <div className="flex items-center w-full h-full gap-3 justify-evenly max-lg:flex-col">
-            <h1 className="text-3xl font-bold max-lg:text-center">
-              Subscribe to our Newsletter
-            </h1>
-            <div className="flex justify-center gap-3">
-              <a href="mailto:talk@mediaasia.lk" className="bg-white text-[#d70e1d] px-6 rounded-lg flex gap-6 py-3"><Mail/> Subscribe</a>
-            </div>
-          </div>
-        </div>
-      </div>
       {/*map*/}
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.039588434427!2d80.636253!3d7.295345000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3662b0fc6e0c7%3A0x3f5e7c76ac4ac8eb!2s63%2C%20Level%2C%203%20Raja%20Veediya%2C%20Kandy%2020000%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1736836602781!5m2!1sen!2sus" allowFullScreen="" loading="lazy" className="w-full h-[400px] px-12 max-md:px-6 border-0 mb-16 max-md:mb-6" referrerPolicy="no-referrer-when-downgrade"></iframe>
-      <CommentForm/>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.039588434427!2d80.636253!3d7.295345000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3662b0fc6e0c7%3A0x3f5e7c76ac4ac8eb!2s63%2C%20Level%2C%203%20Raja%20Veediya%2C%20Kandy%2020000%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1736836602781!5m2!1sen!2sus"
+        allowFullScreen=""
+        loading="lazy"
+        className="w-full h-[400px] px-12 max-md:px-6 border-0 mb-16 max-md:mb-6"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   );
 }

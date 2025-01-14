@@ -1,4 +1,5 @@
 import React from "react";
+import CommentForm from "../components/CommentsForm";
 import {
   Facebook,
   Instagram,
@@ -10,7 +11,9 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-white bg-gray-900">
+    <>
+    <CommentForm/>
+    <footer className="py-6 text-white bg-gray-900 nunito">
       <div className="w-full px-12 mx-auto 2xl:px-36 max-md:px-6">
         <div className="grid grid-cols-1 gap-12 max-lg:gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
@@ -111,7 +114,7 @@ const Footer = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold">More Info</h3>
             <ul className="space-y-3">
-              {["About Us", "Contact", "Faq", "Gallery", "Pricing"].map(
+              {["Home", "Our Culture", "Products", "Contact"].map(
                 (item) => (
                   <li key={item}>
                     <a
@@ -150,6 +153,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

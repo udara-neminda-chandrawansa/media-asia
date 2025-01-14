@@ -16,7 +16,7 @@ export default function App() {
       </Route>
 
       {/* Default route in a switch */}
-      <Route>404: No such page!</Route>
+      <Route><div className="flex items-center justify-center py-6 bg-gray-200">404: No such page!</div></Route>
     </Switch>
     <Footer/>
     </>
