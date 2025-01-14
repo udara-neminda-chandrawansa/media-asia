@@ -27,7 +27,7 @@ const MarketingServices = () => {
 
   return (
     <div className="flex flex-col items-center w-full px-4 pb-12 max-md:p-6 max-md:pt-0 md:px-8 nunito">
-      <span className="text-lg text-[#d70e1d] flex gap-3 items-center mb-6">
+      <span className="text-lg text-[#d70e1d] flex gap-3 items-center mb-6 intersect:motion-preset-slide-right motion-duration-1000">
         <span className="flex ">
           <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
           <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
@@ -38,7 +38,7 @@ const MarketingServices = () => {
           <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
         </span>
       </span>
-      <h1 className="mb-6 text-4xl font-bold text-center md:text-5xl">
+      <h1 className="mb-6 text-4xl font-bold text-center md:text-5xl intersect:motion-preset-slide-left motion-duration-1000 motion-delay-75">
         <span>Dominating the Region with </span>
         <span className="text-[#d70e1d]">Unmatched</span> Expertise
       </h1>
@@ -47,7 +47,7 @@ const MarketingServices = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col p-6 space-y-4 transition-colors duration-300 border rounded-lg cursor-pointer"
+            className={`flex flex-col p-6 space-y-4 transition-colors duration-300 border rounded-lg cursor-pointer  intersect:motion-preset-slide-up motion-duration-1000 motion-delay-${index}00`}
           >
             <h2 className="text-xl font-medium md:text-2xl">{service.title}</h2>
             <p className="text-sm leading-relaxed text-justify md:text-base">
