@@ -590,7 +590,7 @@ function Landing() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 max-md:gap-6 md:grid-cols-2">
           {blogs.map((blog) => (
             <div key={blog.id} className="group">
               {/* Image Container */}
