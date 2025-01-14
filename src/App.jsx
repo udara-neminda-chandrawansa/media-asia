@@ -3,13 +3,17 @@ import { Route, Switch } from "wouter"
 import Nav from "./components/Nav";
 import Landing from "./pages/Landing";
 import Footer from "./components/Footer";
+import Culture from "./pages/Culture";
+import ContactForm from "./components/Contact";
 
 export default function App() {
   return (
     <>
     <Nav/>
     <Switch>
-      <Route path="/" component={Landing} />
+    <Route path="/" component={Landing} />
+    <Route path="/culture" component={Culture} />
+    <Route path="/contact" component={ContactForm} />
 
       <Route path="/users/:name">
         {(params) => <>Hello, {params.name}!</>}

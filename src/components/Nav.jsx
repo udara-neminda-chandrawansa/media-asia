@@ -24,7 +24,7 @@ function Nav() {
               <div className="flex items-center space-x-1">
                 <span className="flex items-center gap-3">
                   <Mail className="text-[#d70e1d]" />
-                  talk@mediaasia.lk
+                  <a href="mailto:talk@mediaasia.lk">talk@mediaasia.lk</a>
                 </span>
               </div>
               <div className="flex items-center space-x-1">
@@ -39,8 +39,6 @@ function Nav() {
               <ul className="flex gap-6 text-lg">
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
                   <Link
-                    data-dropdown-toggle="home-dropdown"
-                    data-dropdown-trigger="hover"
                     className="flex items-center gap-1"
                     href="/"
                   >
@@ -49,8 +47,6 @@ function Nav() {
                 </li>
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
                   <Link
-                    data-dropdown-toggle="pages-dropdown"
-                    data-dropdown-trigger="hover"
                     className="flex items-center gap-1"
                     href="/culture"
                   >
@@ -112,8 +108,6 @@ function Nav() {
                 </li>
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
                   <Link
-                    data-dropdown-toggle="portfolio-dropdown"
-                    data-dropdown-trigger="hover"
                     className="flex items-center gap-1"
                     href="/contact"
                   >
@@ -137,7 +131,7 @@ function Nav() {
             <Phone className="w-6 h-6" />
             <div className="flex flex-col items-start">
               <span className="">Call Now</span>
-              <span className="">+94 70 155 1777</span>
+              <a href="tel:94701551777">+94 70 155 1777</a>
             </div>
           </div>
         </div>
