@@ -38,79 +38,22 @@ function Nav() {
             <div className="flex items-center justify-center w-full max-md:justify-end h-5/6 max-xl:h-full max-md:pr-6 max-md:hidden">
               <ul className="flex gap-6 text-lg">
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
-                  <Link
-                    className="flex items-center gap-1"
-                    href="/"
-                  >
+                  <Link className="flex items-center gap-1" href="/">
                     Home
                   </Link>
                 </li>
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
-                  <Link
-                    className="flex items-center gap-1"
-                    href="/culture"
-                  >
+                  <Link className="flex items-center gap-1" href="/culture">
                     Our Culture
                   </Link>
                 </li>
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
-                  <Link
-                    data-dropdown-toggle="services-dropdown"
-                    data-dropdown-trigger="hover"
-                    className="flex items-center gap-1"
-                    href="/products"
-                  >
-                    Products <ChevronDown />
+                  <Link className="flex items-center gap-1" href="/products">
+                    Products
                   </Link>
-                  {/* Dropdown menu */}
-                  <div
-                    id="services-dropdown"
-                    className="z-20 hidden bg-white divide-y divide-gray-100 shadow w-44 "
-                  >
-                    <ul
-                      className="py-2 text-sm text-gray-700 "
-                      aria-labelledby="dropdownDefaultButton"
-                    >
-                      <li>
-                        <Link
-                          href="/products/item-1"
-                          className="block px-4 py-2 hover:bg-gray-100 "
-                        >
-                          Item 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/products/item-2"
-                          className="block px-4 py-2 hover:bg-gray-100 "
-                        >
-                          Item 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/products/item-3"
-                          className="block px-4 py-2 hover:bg-gray-100 "
-                        >
-                          Item 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/products/item-4"
-                          className="block px-4 py-2 hover:bg-gray-100 "
-                        >
-                          Item 4
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </li>
                 <li className="hover:text-[#d70e1d] transition-all delay-75">
-                  <Link
-                    className="flex items-center gap-1"
-                    href="/contact"
-                  >
+                  <Link className="flex items-center gap-1" href="/contact">
                     Contacts
                   </Link>
                 </li>
@@ -119,7 +62,10 @@ function Nav() {
           </div>
           {/*burgor button for max-md*/}
           <div className="flex items-center justify-center h-full px-6 md:hidden">
-            <button>
+            <button
+              data-coreui-toggle="offcanvas"
+              data-coreui-target="#offcanvasExample"
+            >
               <Menu></Menu>
             </button>
           </div>
@@ -136,6 +82,46 @@ function Nav() {
           </div>
         </div>
       </nav>
+      {/*offcanvas nav*/}
+      <div
+        className="offcanvas offcanvas-start"
+        tabIndex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div className="justify-end border-b offcanvas-header">
+          <button
+            type="button"
+            className="btn-close text-reset"
+            data-coreui-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          <ul className="flex flex-col gap-6 text-lg">
+            <li className="hover:text-[#d70e1d] transition-all delay-75">
+              <Link className="flex items-center gap-1" href="/">
+                Home
+              </Link>
+            </li>
+            <li className="hover:text-[#d70e1d] transition-all delay-75">
+              <Link className="flex items-center gap-1" href="/culture">
+                Our Culture
+              </Link>
+            </li>
+            <li className="hover:text-[#d70e1d] transition-all delay-75">
+              <Link className="flex items-center gap-1" href="/products">
+                Products
+              </Link>
+            </li>
+            <li className="hover:text-[#d70e1d] transition-all delay-75">
+              <Link className="flex items-center gap-1" href="/contact">
+                Contacts
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 }

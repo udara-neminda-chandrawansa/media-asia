@@ -408,7 +408,7 @@ function Landing() {
               <p className="p-2 text-center">Years in Business</p>
             </li>
             <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
+              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
                   2.9K+
                 </p>
@@ -416,7 +416,7 @@ function Landing() {
               <p className="p-2 text-center">Projects successfully completed</p>
             </li>
             <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
+              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
                   251
                 </p>
@@ -424,7 +424,7 @@ function Landing() {
               <p className="p-2 text-center">Client Network</p>
             </li>
             <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16">
+              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
                 <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
                   6.3K+
                 </p>
@@ -437,9 +437,9 @@ function Landing() {
       {/*Expertise grid*/}
       <MarketingServices />
       {/*facilities*/}
-      <div className="w-full px-12 pb-12 mx-auto max-md:p-6 max-md:pt-0 intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
+      <div className="w-full px-12 pb-12 mx-auto max-md:p-6 max-md:pt-0">
         {/* Header Section */}
-        <div className="mb-12 text-center max-md:mb-6 nunito">
+        <div className="mb-12 text-center max-md:mb-6 nunito intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
@@ -479,7 +479,7 @@ function Landing() {
         <div className="grid items-start grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
           {/* Left Column */}
           <div className="flex flex-col gap-6">
-            <div className="flex items-start gap-6">
+            <div className="flex items-start gap-4 intersect:motion-preset-slide-up motion-duration-3000">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
                 <Headphones className="w-6 h-6 text-white" />
               </div>
@@ -496,7 +496,7 @@ function Landing() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 intersect:motion-preset-slide-up motion-duration-3000">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
@@ -515,7 +515,7 @@ function Landing() {
 
           {/* Right Column */}
           <div className="flex flex-col gap-6">
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 intersect:motion-preset-slide-up motion-duration-3000">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
                 <Code className="w-6 h-6 text-white" />
               </div>
@@ -532,7 +532,7 @@ function Landing() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 intersect:motion-preset-slide-up motion-duration-3000">
               <div className="bg-[#d70e1d] p-3 rounded-lg">
                 <PartyPopper className="w-6 h-6 text-white" />
               </div>
@@ -553,9 +553,9 @@ function Landing() {
         </div>
       </div>
       {/*blog posts*/}
-      <div className="w-full px-12 pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito intersect:motion-preset-slide-right motion-duration-3000 motion-delay-75">
+      <div className="w-full px-12 pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito">
         {/* Header */}
-        <div className="mb-12 text-center max-md:mb-6">
+        <div className="mb-12 text-center max-md:mb-6 intersect:motion-preset-slide-right motion-duration-3000 motion-delay-75">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="flex ">
               <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
@@ -592,7 +592,7 @@ function Landing() {
         {/* Blog Grid */}
         <div className="grid grid-cols-1 gap-12 max-md:gap-6 md:grid-cols-2">
           {blogs.map((blog) => (
-            <div key={blog.id} className="group">
+            <div key={blog.id} className="group intersect:motion-preset-slide-up motion-duration-3000">
               {/* Image Container */}
               <div className="relative mb-4 overflow-hidden border rounded-lg">
                 <img

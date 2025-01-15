@@ -4,8 +4,9 @@ import Nav from "./components/Nav";
 import Landing from "./pages/Landing";
 import Footer from "./components/Footer";
 import Culture from "./pages/Culture";
-import ContactForm from "./components/Contact";
+import ContactForm from "./pages/Contact";
 import ObserverProvider from "./components/ObserverProvieder";
+import Products from "./pages/Products";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" component={Landing} />
         <Route path="/culture" component={Culture} />
         <Route path="/contact" component={ContactForm} />
+        <Route path="/products" component={Products} />
 
         <Route path="/users/:name">
           {(params) => <>Hello, {params.name}!</>}
