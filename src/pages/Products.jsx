@@ -132,7 +132,7 @@ function Products() {
           fits your budget
         </p>
         <a
-          href="https://api.whatsapp.com/message/O4SUSP57R5LEE1?autoload=1&app_absent=0"
+          href="https://wa.me/94701551777"
           className="bg-[#d70e1d] text-white px-3 py-1"
         >
           WhatsApp

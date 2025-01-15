@@ -7,6 +7,9 @@ import Culture from "./pages/Culture";
 import ContactForm from "./pages/Contact";
 import ObserverProvider from "./components/ObserverProvieder";
 import Products from "./pages/Products";
+import logo from "/logo-media-asia.png";
+
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 export default function App() {
   return (
@@ -30,6 +33,15 @@ export default function App() {
         </Route>
       </Switch>
       <Footer />
+      <FloatingWhatsApp
+        phoneNumber="94701551777"
+        avatar={logo}
+        accountName="Media Asia Agent"
+        statusMessage="Online"
+        buttonClassName="left-5"
+        chatboxClassName="left-5"
+        chatboxStyle={{transition:"none"}}
+      />
     </ObserverProvider>
   );
 }

@@ -1,0 +1,6 @@
+.custom-floating-whatsapp {
+    position: fixed;
+    left: 20px; /* Position on the left */
+    bottom: 20px; /* Adjust bottom spacing */
+    right: auto; /* Override default right positioning */
+  }
