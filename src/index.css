@@ -5,10 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Futura';
+  src: url('/src/assets/fonts/futura-light-bt.ttf') format('truetype');
+}
+
 .dm-sans {
   font-family: "DM Sans", serif;
 }
 
 .nunito {
-  font-family: "Nunito", serif;
+  font-family: "Futura", serif;
 }
