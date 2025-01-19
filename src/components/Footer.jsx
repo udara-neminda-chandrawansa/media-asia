@@ -22,7 +22,8 @@ const Footer = () => {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold">
                   <span className="text-[#d70e1d]">Media </span>
-                  <span className="text-white">Asia</span>
+                  <span className="text-white">Asia </span>
+                  <span className="text-white">Networks</span>
                 </h2>
                 <p className="text-sm">We are Everywhere</p>
               </div>
@@ -62,7 +63,7 @@ const Footer = () => {
             </div>
 
             {/* Our Services */}
-            <div className="space-y-6 lg:pb-6">
+            <div className="space-y-6">
               <h3 className="text-xl font-semibold">Our Services</h3>
               <ul className="space-y-3">
                 {[
@@ -72,9 +73,6 @@ const Footer = () => {
                   "PR & CSR",
                   "TV & Radio Media Buying",
                   "Creative Services",
-                  "SMM & Digital Marketing",
-                  "OOH",
-                  "Events & Activations",
                 ].map((service) => (
                   <li key={service}>
                     <p className="text-gray-400 transition-colors cursor-pointer hover:text-white">
@@ -103,10 +101,10 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 mt-1" />
                   <div className="text-gray-400">
-                    <p>No 63</p>
+                    <p>No 63,</p>
                     <p>Level-3, </p>
                     <p>Raja Veediya, </p>
-                    <p>Kandy</p>
+                    <p>Kandy,</p>
                     <p>Studio Complex at Hanthana Estate</p>
                   </div>
                 </div>
@@ -159,9 +157,9 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 text-center text-gray-400 border-t border-gray-800">
+          <div className="pt-8 mt-8 text-center text-gray-400 border-t border-gray-800">
             <p>
-              2025 © All Rights Reserved | Media Asia | Designed & Developed by
+              2025 © All Rights Reserved | New Media Asia Holdings Pvt Ltd. | Designed & Developed by
               Silicon Radon Networks (Pvt) Ltd.
             </p>
           </div>
