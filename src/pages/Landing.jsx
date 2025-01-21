@@ -232,10 +232,7 @@ function Landing() {
 
               <div className="grid grid-cols-3 max-sm:grid-cols-2 gap-4 max-[425px]:gap-2">
                 {services.map((service) => (
-                  <div
-                    key={service.id}
-                    className="flex items-center w-fit"
-                  >
+                  <div key={service.id} className="flex items-center w-fit">
                     <div className="text-[#d70e1d] mr-3">
                       <CircleCheck />
                     </div>
@@ -348,99 +345,103 @@ function Landing() {
         </div>
       </div>
       {/*About*/}
-      <div className="flex flex-col gap-6 px-12 py-12 max-md:p-6 nunito motion-opacity-in-0 -motion-translate-x-in-100 motion-blur-in-md">
-        {/*about company*/}
-        <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+      <div className="flex items-center md:px-6 justify-center">
+        <div className="flex max-w-7xl flex-col gap-6 py-12 max-md:p-6 nunito motion-opacity-in-0 -motion-translate-x-in-100 motion-blur-in-md">
+          {/*about company*/}
+          <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
+            About Media Asia
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
           </span>
-          About Media Asia
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg intersect:motion-preset-slide-left motion-duration-3000 motion-delay-100">
+            We are an independent full-funnel advertising and marketing agency
+            with offices in Kandy and Nuwara Eliya. Our approach breaks away
+            from traditional agency-brand barriers and outdated models,
+            fostering fluid, collaborative relationships free from knowledge
+            silos. We offer seamless, integrated solutions that drive innovation
+            and growth for our clients.
+          </p>
+          <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-right motion-duration-3000 motion-delay-150">
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
+            Approach
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
           </span>
-        </span>
-        <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg intersect:motion-preset-slide-left motion-duration-3000 motion-delay-100">
-          We are an independent full-funnel advertising and marketing agency
-          with offices in Kandy and Nuwara Eliya. Our approach breaks away from
-          traditional agency-brand barriers and outdated models, fostering
-          fluid, collaborative relationships free from knowledge silos. We offer
-          seamless, integrated solutions that drive innovation and growth for
-          our clients.
-        </p>
-        <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-right motion-duration-3000 motion-delay-150">
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+          <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg intersect:motion-preset-slide-right motion-duration-3000 motion-delay-200">
+            We approach every brand by first gaining a deep understanding of its
+            audience and their behaviors, using thorough research and leveraging
+            your valuable data. With a complete picture in place, we craft a
+            strategic plan that spans from creative development to activation,
+            ensuring impactful results tailored to your brand’s needs.
+          </p>
+          <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-300">
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
+            Our Stats
+            <span className="flex ">
+              <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
+              <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
+            </span>
           </span>
-          Approach
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
-          </span>
-        </span>
-        <p className="text-2xl text-justify max-md:text-xl max-sm:text-lg intersect:motion-preset-slide-right motion-duration-3000 motion-delay-200">
-          We approach every brand by first gaining a deep understanding of its
-          audience and their behaviors, using thorough research and leveraging
-          your valuable data. With a complete picture in place, we craft a
-          strategic plan that spans from creative development to activation,
-          ensuring impactful results tailored to your brand’s needs.
-        </p>
-        <span className="text-lg text-[#d70e1d] flex gap-3 items-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-300">
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
-          </span>
-          Our Stats
-          <span className="flex ">
-            <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
-            <span className="w-2 h-2 -ml-1 bg-black rounded-full"></span>
-          </span>
-        </span>
-        <div className="flex justify-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-500">
-          <ul className="grid grid-cols-4 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
-                <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  11
+          <div className="flex justify-center intersect:motion-preset-slide-left motion-duration-3000 motion-delay-500">
+            <ul className="grid grid-cols-4 gap-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
+              <li className="flex flex-col items-center">
+                <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
+                  <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
+                    11
+                  </p>
+                </div>
+                <p className="p-2 text-center">Years in Business</p>
+              </li>
+              <li className="flex flex-col items-center">
+                <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
+                  <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
+                    2.9K+
+                  </p>
+                </div>
+                <p className="p-2 text-center">
+                  Projects successfully completed
                 </p>
-              </div>
-              <p className="p-2 text-center">Years in Business</p>
-            </li>
-            <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
-                <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  2.9K+
-                </p>
-              </div>
-              <p className="p-2 text-center">Projects successfully completed</p>
-            </li>
-            <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
-                <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  251
-                </p>
-              </div>
-              <p className="p-2 text-center">Client Network</p>
-            </li>
-            <li className="flex flex-col items-center">
-              <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
-                <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
-                  6.3K+
-                </p>
-              </div>
-              <p className="p-2 text-center">Campaigns</p>
-            </li>
-          </ul>
+              </li>
+              <li className="flex flex-col items-center">
+                <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
+                  <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
+                    251
+                  </p>
+                </div>
+                <p className="p-2 text-center">Client Network</p>
+              </li>
+              <li className="flex flex-col items-center">
+                <div className="rounded-full h-20 max-lg:h-16 max-lg:w-16 w-20 border border-[#d70e1d]/10 flex justify-center items-center text-3xl max-lg:text-2xl p-20 max-lg:p-16 hover:motion-preset-shake cursor-pointer">
+                  <p className="p-16 max-lg:p-12 h-full w-full rounded-full shadow-lg flex justify-center items-center text-[#d70e1d] font-extrabold">
+                    6.3K+
+                  </p>
+                </div>
+                <p className="p-2 text-center">Campaigns</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       {/*Expertise grid*/}
       <MarketingServices />
       {/*facilities*/}
-      <div className="w-full px-12 pb-12 mx-auto max-md:p-6 max-md:pt-0">
+      <div className="w-full px-4 pb-12 flex items-center flex-col mx-auto max-md:p-6 max-md:pt-0">
         {/* Header Section */}
-        <div className="mb-12 text-center max-md:mb-6 nunito intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
+        <div className="mb-12 max-w-7xl text-center max-md:mb-6 nunito intersect:motion-preset-slide-left motion-duration-3000 motion-delay-75">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-lg text-[#d70e1d] flex gap-3 items-center">
               <span className="flex ">
@@ -477,7 +478,7 @@ function Landing() {
         </div>
 
         {/* Main Content Section */}
-        <div className="grid items-start grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
+        <div className="grid items-start max-w-7xl grid-cols-1 gap-8 max-md:gap-6 md:grid-cols-2 nunito">
           {/* Left Column */}
           <div className="flex flex-col gap-6">
             <div className="flex items-start gap-4 intersect:motion-preset-slide-up motion-duration-3000">
@@ -554,9 +555,9 @@ function Landing() {
         </div>
       </div>
       {/*blog posts*/}
-      <div className="w-full px-12 pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito">
+      <div className="w-full px-4 flex flex-col items-center pb-16 mx-auto max-md:px-6 max-md:pb-6 nunito">
         {/* Header */}
-        <div className="mb-12 text-center max-md:mb-6 intersect:motion-preset-slide-right motion-duration-3000 motion-delay-75">
+        <div className="mb-12 max-w-7xl text-center max-md:mb-6 intersect:motion-preset-slide-right motion-duration-3000 motion-delay-75">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="flex ">
               <span className="w-2 h-2 bg-[#d70e1d] rounded-full z-10"></span>
@@ -591,9 +592,12 @@ function Landing() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 gap-12 max-md:gap-6 md:grid-cols-2">
+        <div className="grid max-w-7xl grid-cols-1 gap-12 max-md:gap-6 md:grid-cols-2">
           {blogs.map((blog) => (
-            <div key={blog.id} className="group intersect:motion-preset-slide-up motion-duration-3000">
+            <div
+              key={blog.id}
+              className="group intersect:motion-preset-slide-up motion-duration-3000"
+            >
               {/* Image Container */}
               <div className="relative mb-4 overflow-hidden border rounded-lg">
                 <img
@@ -624,7 +628,7 @@ function Landing() {
           ))}
         </div>
       </div>
-      <CommentForm/>
+      <CommentForm />
     </div>
   );
 }

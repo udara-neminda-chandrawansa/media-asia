@@ -4,7 +4,7 @@ function Newsletter() {
     <>
       {/*newsletter*/}
       <div className="w-full border-b nunito">
-        <div className="flex justify-between w-full h-full px-12 max-md:px-6 py-6 bg-[#d70e1d] text-white">
+        <div className="flex justify-between border-t w-full h-full px-12 max-md:px-6 py-6 bg-[#d70e1d] text-white">
           <div className="flex items-center w-full h-full gap-3 justify-evenly max-lg:flex-col">
             <h1 className="text-3xl font-bold max-lg:text-center">
               Subscribe to our Newsletter

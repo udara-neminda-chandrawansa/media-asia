@@ -26,7 +26,7 @@ const CommentForm = () => {
 
   return (
     <>
-      <div className="p-12 mx-auto text-gray-300 bg-gray-900 border-b max-md:p-6 nunito flex gap-6 max-md:flex-col">
+      <div className="p-12 2xl:px-36 mx-auto text-gray-300 bg-gray-900 border-b max-md:p-6 nunito flex gap-6 max-md:flex-col">
         <div className="md:w-1/2">
           <h2 className="mb-2 text-2xl font-semibold text-white">
             Leave a Reply
@@ -53,7 +53,7 @@ const CommentForm = () => {
               />
             </div>
 
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <div>
                 <label htmlFor="name" className="block mb-2">
                   Name<span className="text-red-500">*</span>
