@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "wouter";
-import CommentForm from "../components/CommentsForm";
 import {
   Facebook,
   Instagram,
@@ -13,7 +12,6 @@ import {
 const Footer = () => {
   return (
     <>
-      <CommentForm />
       <footer className="py-6 text-white bg-gray-900 nunito">
         <div className="w-full px-12 mx-auto 2xl:px-36 max-md:px-6">
           <div className="grid grid-cols-1 gap-12 max-lg:gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -122,7 +122,7 @@ const ContactForm = () => {
         </div>
       </div>
       {/*extras grid*/}
-      <div className="grid grid-cols-4 gap-6 pb-6 mx-auto max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 md:max-w-6xl max-md:px-6">
+      <div className="hidden grid-cols-4 gap-6 pb-6 mx-auto max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 md:max-w-6xl max-md:px-6">
       <div className="flex items-center justify-center gap-6 p-6 text-white bg-gray-700">
           <input
             type="search"

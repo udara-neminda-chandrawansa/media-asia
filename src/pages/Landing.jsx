@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import React from "react";
 
 import MarketingServices from "../components/ExpertiseGrid";
+import CommentForm from "../components/CommentsForm";
 
 import contact_img from "../assets/images/landing/contact.jpg";
 
@@ -623,14 +624,7 @@ function Landing() {
           ))}
         </div>
       </div>
-      {/*map*/}
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.039588434427!2d80.636253!3d7.295345000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3662b0fc6e0c7%3A0x3f5e7c76ac4ac8eb!2s63%2C%20Level%2C%203%20Raja%20Veediya%2C%20Kandy%2020000%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1736836602781!5m2!1sen!2sus"
-        allowFullScreen=""
-        loading="lazy"
-        className="w-full h-[400px] px-12 max-md:px-6 border-0 mb-16 max-md:mb-6"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <CommentForm/>
     </div>
   );
 }

@@ -51,7 +51,7 @@ function Culture() {
       </div>
       {/*section 2*/}
       <div
-        className="relative flex flex-col justify-center gap-6 h-[50dvh] px-12 py-6 border-t max-md:px-6 text-white bg-cover bg-center"
+        className="relative flex flex-col justify-center gap-6 h-[50dvh] px-12 py-6 max-md:px-6 border-b text-white bg-cover bg-center"
         style={{ backgroundImage: `url(${albert})` }}
       >
         {/*backdrop*/}
